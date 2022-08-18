@@ -1,3 +1,5 @@
+<!-- пицца сделай сам 
+ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,12 +13,17 @@
       rel="stylesheet"
     />
     <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="./img/logo__little.png"
+      type="image/x-icon"
+    />
+    <title>Кафе Caprese</title>
   </head>
   <body>
     <header></header>
-    <section id="main">
-      <div class="container main">
+    <section class="main">
+      <div class="container">
         <div class="main__block left">
           <img src="./img/logo.png" alt="Caprese" />
           <p>
@@ -26,20 +33,114 @@
             quisquam?
           </p>
         </div>
-        <div class="main__block right"></div>
+        <div class="main__block right">
+          <!-- <img src=".//img/main-cooker-update.png" alt="" /> -->
+        </div>
       </div>
     </section>
     <section class="menu">
       <div class="container">
-        <h1 claass="menu__title">Наше меню</h1>
-        <hr />
-        <nav class="menu_nav">
-          <li><a href="#">Пиццы</a></li>
-          <li><a href="#">Бургеры</a></li>
-          <li><a href="#">Первые блюда</a></li>
-          <li><a href="#">Вторые блюда</a></li>
-          <li><a href="#">Напиткы</a></li>
+        <nav class="menu__nav">
+          <h1 claass="menu__nav--title">Наше меню:</h1>
+          <ul class="menu__nav--list">
+            <li class="list--link"><a href="#pizza">Пиццы</a></li>
+            <li class="list--link"><a href="#burger">Бургеры</a></li>
+            <li class="list--link"><a href="#">Обеды</a></li>
+            <li class="list--link"><a href="#">Кухня</a></li>
+            <!-- <li class="list--link"><a href="#">Салаты</a></li>
+            <li class="list--link"><a href="#">Горячее</a></li>
+            <li class="list--link"><a href="#">Гарниры</a></li> -->
+            <li class="list--link"><a href="#">Напитки</a></li>
+          </ul>
+          <h1 claass="menu__nav--title">
+            <a href="tel:+375291371010"
+              ><span>Оформить доставку</span>+375 (29) 137 10 10</a
+            >
+          </h1>
         </nav>
+        <div class="menu__category" id="pizza">
+          <hr />
+          <h3>Pizza</h3>
+          <hr />
+        </div>
+        <div class="menu__box">
+          <img src="./img/sypervilag.png" alt="pizza" class="menu__box--img" />
+          <span class="menu__box--new">New</span>
+          <h3>Супер мясная</h3>
+          <p>
+            Колбаски Пепперони, ветчина, грудинка, филе куриное (гриль), лук
+            красный, сыр Моцарелла, соус Горчичный, соус Томатный, приправа
+            Лионская
+          </p>
+          <div class="menu__box--numbers">
+            <span>19,9 BYN</span>
+            <span>560 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/peperoni.png" alt="pizza" class="menu__box--img" />
+          <span class="menu__box--new">New</span>
+          <h3>Пепперони</h3>
+          <p>
+            Колбаски Пепперони, сыр Моцарелла, соус Томатный, приправа Лионская
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>450 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/carbonara.png" alt="pizza" class="menu__box--img" />
+          <span class="menu__box--new">New</span>
+          <h3>Карбонара</h3>
+          <p>
+            Сливки, желток, грудинка, сыр Джугас, сыр Моцарелла, приправа
+            Лионская
+          </p>
+          <div class="menu__box--numbers">
+            <span>17 BYN</span>
+            <span>430 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/beer.png" alt="pizza" class="menu__box--img" />
+          <span class="menu__box--new">New</span>
+          <h3>Пицца "К пиву"</h3>
+          <p>
+            Филе куриное (гриль), ветчина, колбаски гриль из индейки, соус Чили,
+            сыр Моцарелла, соус Томатный, приправа Лионская
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>500 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/french.png" alt="pizza" class="menu__box--img" />
+          <span class="menu__box--new">New</span>
+          <h3>Мясо по-французки</h3>
+          <p>
+            Cвинина маринованая, ветчина в/к, лук карамелизированный, лук
+            репчатый красный, соус Ранч, приправа Лионская
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/mashina.png" alt="pizza" class="menu__box--img" />
+          <span class="menu__box--new">New</span>
+          <h3>Машинка for KIDS</h3>
+          <p>
+            Ветчина, томаты, огурец, маслины, сыр Моцарелла, соус Ранч, приправа
+            Лионская
+          </p>
+          <div class="menu__box--numbers">
+            <span>13 BYN</span>
+            <span>410 г.</span>
+          </div>
+        </div>
         <div class="menu__box">
           <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
           <h3>Четыре сезона</h3>
@@ -47,6 +148,182 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
             saepe?
           </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__category" id="burger">
+          <hr />
+          <h3>Burger</h3>
+          <hr />
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__box">
+          <img src="./img/pizza.png" alt="pizza" class="menu__box--img" />
+          <h3>Четыре сезона</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+            saepe?
+          </p>
+          <div class="menu__box--numbers">
+            <span>18 BYN</span>
+            <span>480 г.</span>
+          </div>
+        </div>
+        <div class="menu__category" id="lunch">
+          <hr />
+          <h3>Lunch</h3>
+          <hr />
+        </div>
+      </div>
+      <div class="lunch">
+        <div class="container">
+          <div class="lunch__box">h3.</div>
+          <div class="lunch__box"></div>
         </div>
       </div>
     </section>
