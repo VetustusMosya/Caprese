@@ -102,7 +102,6 @@ html {
     .container {
       display: flex;
       justify-content: space-between;
-      // align-items: baseline;
       align-items: center;
     }
     position: sticky;
@@ -144,7 +143,6 @@ html {
           background-color: $contrast__color;
           color: $main__color;
           box-shadow: 0px 0px 26px -1px $logo__color;
-          // text-decoration: underline;
         }
       }
     }
@@ -224,10 +222,7 @@ html {
           border: 2px solid $main__color;
           border-radius: 50px;
           text-align: center;
-          &:hover {
-            background-color: $main__color;
-            color: $contrast__color;
-          }
+          transition: 0.6s;
         }
         &:nth-child(even) {
           text-align: end;
@@ -237,6 +232,74 @@ html {
     }
     &:hover .box__wrapper--img {
       transform: rotateZ(30deg);
+    }
+    &:hover .box__numbers--cost {
+      background-color: $main__color;
+      color: $contrast__color;
+    }
+  }
+  .ingridients {
+    background: $contrast__color;
+    color: $main__color;
+    .container {
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &__category {
+      color: $main__color;
+      padding: 20px;
+      margin-bottom: 20px;
+      &--title {
+      }
+      hr {
+        background-color: $main__color;
+      }
+    }
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      max-width: 390px;
+      width: 100%;
+      box-shadow: 0px 0px 15px -1px $main__color;
+      margin: 0 20px 20px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__numbers {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-self: baseline;
+          span {
+            width: 50%;
+            &:nth-child(odd) {
+              font-weight: 700;
+              padding: 3px;
+              border: 2px solid $main__color;
+              border-radius: 50px;
+              text-align: center;
+              transition: 0.6s;
+            }
+            &:nth-child(even) {
+              text-align: end;
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+      &--img {
+        width: 70px;
+        margin-left: 20px;
+      }
+      &:hover .wrapper__numbers--cost {
+        background-color: $main__color;
+        color: $contrast__color;
+      }
     }
   }
 }
