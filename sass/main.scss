@@ -1,9 +1,8 @@
+@import url(./keyframes.css);
 $main__color: #a6876f;
 $contrast__color: white;
 $logo__color: #6a3d34;
-// $logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
-// $main__color: white;
-// $contrast__color: #a6876f;
+// logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
 * {
   padding: 0;
   margin: 0;
@@ -40,6 +39,7 @@ html {
   max-width: 1300px;
   width: 100%;
   margin: auto;
+  display: flex;
 }
 .main {
   background: linear-gradient(
@@ -51,7 +51,6 @@ html {
     $main__color
   );
   .container {
-    display: flex;
     height: 74ch;
   }
   &__block {
@@ -60,7 +59,7 @@ html {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    img {
+    &--img {
       max-width: 500px;
       width: 100%;
       margin-bottom: 50px;
@@ -68,7 +67,7 @@ html {
       filter: hue-rotate(45deg);
       filter: sepia(0.7);
     }
-    p {
+    &--text {
       max-width: 500px;
       width: 100%;
       color: $main__color;
@@ -80,52 +79,50 @@ html {
     background-size: 100%;
   }
 }
-
 .menu {
-  // background-image: url(../img/fone__v2.png);
-  // background-position: top;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   background-color: $main__color;
   position: relative;
+  .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   &__nav {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
     position: sticky;
     z-index: 999;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 1300px;
+    width: 100%;
     background-color: $main__color;
-    align-items: baseline;
     color: $contrast__color;
-    padding: 20px 0 20px;
-    &--title {
-      // схуяли блять не работает
-      font-size: 24px;
-      text-transform: uppercase;
-    }
-    h1 {
+    padding: 20px 0 10px;
+    .delivery {
       font-size: 30px;
       text-transform: uppercase;
       position: relative;
-      span {
-        position: absolute;
-        top: -5px;
-        width: 100%;
-        font-size: 15px;
-        left: 50%;
-        transform: translate(-35%, -50%);
-      }
-      a:hover {
-        text-decoration: underline;
+      &__link {
+        &--caption {
+          position: absolute;
+          top: -5px;
+          width: 100%;
+          font-size: 15px;
+          left: 50%;
+          transform: translate(-35%, -50%);
+        }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
-    &--list {
+    .list {
       display: flex;
       justify-content: space-between;
       max-width: 700px;
       width: 100%;
-      .list--link {
+      &__link {
         margin-left: 10px;
         font-size: 20px;
         &:hover {
@@ -134,12 +131,24 @@ html {
       }
     }
   }
-  .container {
+  &__category {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
+    padding: 60px 0 10px;
+    color: $contrast__color;
+    align-items: center;
+    font-size: 40px;
+    &--title {
+      margin: 0 50px;
+    }
+    &--line {
+      width: 100%;
+      height: 4px;
+      background: $contrast__color;
+    }
   }
-  &__box {
+  .box {
     background-color: $contrast__color;
     margin: 20px;
     padding: 20px;
@@ -150,32 +159,39 @@ html {
     box-shadow: 0px 0px 26px -1px $logo__color;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    &--new {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      padding: 5px 10px;
-      background-color: red;
-      color: white;
-      font-weight: 900;
-      font-size: 20px;
-      border-radius: 20px 0 20px 0;
-      animation: rotate 2s infinite 0ms linear;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      &--img {
+        width: 240px;
+        height: 240px;
+        transition: 0.4s;
+      }
+      &--title {
+        width: 100%;
+        margin: 10px 0 20px;
+      }
+      &--new {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+        background-color: red;
+        color: white;
+        font-weight: 900;
+        font-size: 20px;
+        border-radius: 20px 0 20px 0;
+        animation: rotate 2s infinite 0ms linear;
+      }
     }
-    img {
-      width: 240px;
-      height: 240px;
-    }
-    p {
-      width: 100%;
-      margin: 20px 0;
-    }
-    &--numbers {
+    &__numbers {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-self: baseline;
+      margin-top: 20px;
       span {
         width: 50%;
         &:nth-child(odd) {
@@ -195,31 +211,8 @@ html {
         }
       }
     }
-  }
-  &__category {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 40px 0;
-    padding: 0 20px;
-    color: $contrast__color;
-    align-items: center;
-    font-size: 40px;
-    hr {
-      width: 40%;
-      height: 4px;
-      background: $contrast__color;
+    &:hover .box__wrapper--img {
+      transform: rotateZ(30deg);
     }
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotateY(0deg);
-  }
-  20% {
-    transform: rotateY(360deg);
-  }
-  100% {
-    transform: rotateY(360deg);
   }
 }
