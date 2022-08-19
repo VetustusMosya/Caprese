@@ -1,5 +1,6 @@
 @import url(./keyframes.css);
 $main__color: #a6876f;
+// #a6876f - кофейный который
 $contrast__color: white;
 $logo__color: #6a3d34;
 // logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
@@ -42,14 +43,25 @@ html {
   display: flex;
 }
 .main {
+  // background: linear-gradient(
+  //     180deg,
+  //     transparent,
+  //     90%,
+  //     $main__color,
+  //     99.9%,
+  //     $main__color
+  //   ),
+  //   url(../img/flag2.png) no-repeat center;
   background: linear-gradient(
-    to bottom,
-    white,
+    180deg,
+    transparent,
     90%,
     $main__color,
     99.9%,
     $main__color
   );
+  // background: url(../img/flag2.png) no-repeat center;
+  background-size: cover;
   .container {
     height: 74ch;
   }
@@ -64,20 +76,20 @@ html {
       width: 100%;
       margin-bottom: 50px;
       // развлекаемся с лого
-      filter: hue-rotate(45deg);
-      filter: sepia(0.7);
+      // filter: hue-rotate(45deg);
+      filter: sepia(0.3);
     }
     &--text {
       max-width: 500px;
       width: 100%;
-      color: $main__color;
+      color: $logo__color;
       font-size: 20px;
     }
   }
-  .right {
-    background: url(../img/main-cooker-update.png) no-repeat center;
-    background-size: 100%;
-  }
+  // .right {
+  // background: url(../img/flag2.png) no-repeat center;
+  // background-size: 100%;
+  // }
 }
 .menu {
   background-color: $main__color;
@@ -90,7 +102,8 @@ html {
     .container {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      // align-items: baseline;
+      align-items: center;
     }
     position: sticky;
     z-index: 999;
@@ -123,10 +136,15 @@ html {
       max-width: 700px;
       width: 100%;
       &__link {
+        padding: 5px 20px;
+        border-radius: 20px;
         margin-left: 10px;
         font-size: 20px;
         &:hover {
-          text-decoration: underline;
+          background-color: $contrast__color;
+          color: $main__color;
+          box-shadow: 0px 0px 26px -1px $logo__color;
+          // text-decoration: underline;
         }
       }
     }
@@ -184,6 +202,12 @@ html {
         font-size: 20px;
         border-radius: 20px 0 20px 0;
         animation: rotate 2s infinite 0ms linear;
+      }
+      &--pepper {
+        position: absolute;
+        width: 40px;
+        top: 261px;
+        left: 215px;
       }
     }
     &__numbers {

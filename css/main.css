@@ -39,7 +39,8 @@ html {
 }
 
 .main {
-  background: linear-gradient(to bottom, white, 90%, #a6876f, 99.9%, #a6876f);
+  background: linear-gradient(180deg, transparent, 90%, #a6876f, 99.9%, #a6876f);
+  background-size: cover;
 }
 .main .container {
   height: 74ch;
@@ -55,18 +56,13 @@ html {
   max-width: 500px;
   width: 100%;
   margin-bottom: 50px;
-  filter: hue-rotate(45deg);
-  filter: sepia(0.7);
+  filter: sepia(0.3);
 }
 .main__block--text {
   max-width: 500px;
   width: 100%;
-  color: #a6876f;
+  color: #6a3d34;
   font-size: 20px;
-}
-.main .right {
-  background: url(../img/main-cooker-update.png) no-repeat center;
-  background-size: 100%;
 }
 
 .menu {
@@ -89,7 +85,7 @@ html {
 .menu__nav .container {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 .menu__nav .delivery {
   font-size: 30px;
@@ -114,11 +110,15 @@ html {
   width: 100%;
 }
 .menu__nav .list__link {
+  padding: 5px 20px;
+  border-radius: 20px;
   margin-left: 10px;
   font-size: 20px;
 }
 .menu__nav .list__link:hover {
-  text-decoration: underline;
+  background-color: white;
+  color: #a6876f;
+  box-shadow: 0px 0px 26px -1px #6a3d34;
 }
 .menu__category {
   display: flex;
@@ -175,6 +175,12 @@ html {
   font-size: 20px;
   border-radius: 20px 0 20px 0;
   animation: rotate 2s infinite 0ms linear;
+}
+.menu .box__wrapper--pepper {
+  position: absolute;
+  width: 40px;
+  top: 261px;
+  left: 215px;
 }
 .menu .box__numbers {
   width: 100%;
