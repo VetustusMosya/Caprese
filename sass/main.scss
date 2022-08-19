@@ -240,6 +240,12 @@ html {
   }
   .ingridients {
     background: $contrast__color;
+    // background: linear-gradient(
+    //   180deg,
+    //   $main__color 10%,
+    //   $contrast__color 90%,
+    //   $main__color
+    // );
     color: $main__color;
     .container {
       justify-content: space-around;
@@ -249,8 +255,8 @@ html {
       color: $main__color;
       padding: 20px;
       margin-bottom: 20px;
-      &--title {
-      }
+      // &--title {
+      // }
       hr {
         background-color: $main__color;
       }
@@ -299,6 +305,43 @@ html {
       &:hover .wrapper__numbers--cost {
         background-color: $main__color;
         color: $contrast__color;
+      }
+    }
+  }
+  .lunch {
+    background: $contrast__color;
+    color: $main__color;
+    padding-bottom: 90px;
+    &__category {
+      color: $main__color;
+      display: flex;
+      flex-direction: column;
+      &--line {
+        background: $main__color;
+      }
+    }
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--title {
+        margin-top: 20px;
+      }
+      .item {
+        display: flex;
+        padding: 10px 20px;
+        &__text {
+          margin: 0px 150px 0px 0;
+        }
+        span {
+          width: 100px;
+          align-self: center;
+        }
+        &:hover {
+          background: rgb(251, 243, 238);
+        }
       }
     }
   }

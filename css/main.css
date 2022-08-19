@@ -272,4 +272,41 @@ html {
 .menu .ingridients__box:hover .wrapper__numbers--cost {
   background-color: #a6876f;
   color: white;
+}
+.menu .lunch {
+  background: white;
+  color: #a6876f;
+  padding-bottom: 90px;
+}
+.menu .lunch__category {
+  color: #a6876f;
+  display: flex;
+  flex-direction: column;
+}
+.menu .lunch__category--line {
+  background: #a6876f;
+}
+.menu .lunch__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu .lunch__wrapper--title {
+  margin-top: 20px;
+}
+.menu .lunch__wrapper .item {
+  display: flex;
+  padding: 10px 20px;
+}
+.menu .lunch__wrapper .item__text {
+  margin: 0px 150px 0px 0;
+}
+.menu .lunch__wrapper .item span {
+  width: 100px;
+  align-self: center;
+}
+.menu .lunch__wrapper .item:hover {
+  background: rgb(251, 243, 238);
 }/*# sourceMappingURL=main.css.map */
