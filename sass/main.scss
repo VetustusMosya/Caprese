@@ -10,7 +10,17 @@ $logo__color: #6a3d34;
   box-sizing: border-box;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+  cursor: default;
+}
 img {
+  pointer-events: none;
   max-width: 100%;
   height: auto;
 }
@@ -86,10 +96,6 @@ html {
       font-size: 20px;
     }
   }
-  // .right {
-  // background: url(../img/flag2.png) no-repeat center;
-  // background-size: 100%;
-  // }
 }
 .menu {
   background-color: $main__color;
@@ -239,13 +245,8 @@ html {
     }
   }
   .ingridients {
+    padding-bottom: 100px;
     background: $contrast__color;
-    // background: linear-gradient(
-    //   180deg,
-    //   $main__color 10%,
-    //   $contrast__color 90%,
-    //   $main__color
-    // );
     color: $main__color;
     .container {
       justify-content: space-around;
@@ -264,11 +265,11 @@ html {
     &__box {
       display: flex;
       justify-content: space-between;
-      max-width: 390px;
+      max-width: 400px;
       width: 100%;
-      box-shadow: 0px 0px 15px -1px $main__color;
-      margin: 0 20px 20px;
-      padding: 10px 20px;
+      box-shadow: 0px 0px 10px -1px $main__color;
+      margin: 0 10px 10px;
+      padding: 5px 10px;
       border-radius: 20px;
       font-size: 14px;
       .wrapper {
@@ -330,13 +331,18 @@ html {
         margin-top: 20px;
       }
       .item {
+        max-width: 800px;
+        width: 100%;
         display: flex;
+        justify-content: space-between;
         padding: 10px 20px;
         &__text {
-          margin: 0px 150px 0px 0;
+          max-width: 550px;
+          padding: 0 120px 0 0;
+          width: 100%;
         }
         span {
-          width: 100px;
+          width: 150px;
           align-self: center;
         }
         &:hover {
