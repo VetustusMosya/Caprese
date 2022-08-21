@@ -15,6 +15,10 @@ span {
   cursor: default;
 }
 
+h1 {
+  font-size: 54px;
+}
+
 img {
   pointer-events: none;
   max-width: 100%;
@@ -37,7 +41,7 @@ nav {
 }
 
 html {
-  background-color: white;
+  background-color: #a6876f;
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
 }
@@ -50,7 +54,7 @@ html {
 }
 
 .main {
-  background: linear-gradient(180deg, transparent, 90%, #a6876f, 99.9%, #a6876f);
+  background: linear-gradient(180deg, white, 90%, #a6876f, 99.9%, #a6876f);
   background-size: cover;
 }
 .main .container {
@@ -76,10 +80,6 @@ html {
   font-size: 20px;
 }
 
-.menu {
-  background-color: #a6876f;
-  position: relative;
-}
 .menu .container {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -133,7 +133,7 @@ html {
 }
 .menu__category {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   padding: 60px 0 10px;
   color: white;
@@ -236,7 +236,11 @@ html {
   padding: 20px;
   margin-bottom: 20px;
 }
+.menu .ingridients__category--title {
+  text-align: center;
+}
 .menu .ingridients__category hr {
+  max-width: 340px;
   background-color: #a6876f;
 }
 .menu .ingridients__box {

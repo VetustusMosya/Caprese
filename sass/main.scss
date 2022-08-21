@@ -19,6 +19,11 @@ h5,
 span {
   cursor: default;
 }
+
+h1 {
+  font-size: 54px;
+}
+
 img {
   pointer-events: none;
   max-width: 100%;
@@ -41,7 +46,7 @@ nav {
 }
 
 html {
-  background-color: $contrast__color;
+  background-color: $main__color;
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
 }
@@ -53,24 +58,14 @@ html {
   display: flex;
 }
 .main {
-  // background: linear-gradient(
-  //     180deg,
-  //     transparent,
-  //     90%,
-  //     $main__color,
-  //     99.9%,
-  //     $main__color
-  //   ),
-  //   url(../img/flag2.png) no-repeat center;
   background: linear-gradient(
     180deg,
-    transparent,
+    $contrast__color,
     90%,
     $main__color,
     99.9%,
     $main__color
   );
-  // background: url(../img/flag2.png) no-repeat center;
   background-size: cover;
   .container {
     height: 74ch;
@@ -85,7 +80,7 @@ html {
       max-width: 500px;
       width: 100%;
       margin-bottom: 50px;
-      // развлекаемся с лого
+      // * развлекаемся с лого
       // filter: hue-rotate(45deg);
       filter: sepia(0.3);
     }
@@ -97,9 +92,8 @@ html {
     }
   }
 }
+// ! ..............Меню.................
 .menu {
-  background-color: $main__color;
-  position: relative;
   .container {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -155,7 +149,7 @@ html {
   }
   &__category {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     padding: 60px 0 10px;
     color: $contrast__color;
@@ -256,9 +250,11 @@ html {
       color: $main__color;
       padding: 20px;
       margin-bottom: 20px;
-      // &--title {
-      // }
+      &--title {
+        text-align: center;
+      }
       hr {
+        max-width: 340px;
         background-color: $main__color;
       }
     }
