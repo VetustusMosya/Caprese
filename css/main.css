@@ -150,7 +150,7 @@ html {
   width: 100%;
   border-radius: 20px;
   color: #a6876f;
-  box-shadow: 0px 0px 26px -1px #6a3d34;
+  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3), -8px -8px 8px 0 rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -209,14 +209,17 @@ html {
   text-align: end;
   padding: 5px 0;
 }
-.box:hover .box__wrapper--img {
-  transform: rotateZ(30deg);
-}
 .box:hover .box__numbers--cost {
   background-color: #a6876f;
   color: white;
 }
 
+.pizza__container {
+  margin-bottom: 100px;
+}
+.pizza__box:hover .box__wrapper--img {
+  transform: rotateZ(30deg);
+}
 .pizza .ingridients {
   padding-bottom: 100px;
   background: white;
@@ -240,7 +243,7 @@ html {
   justify-content: space-between;
   max-width: 400px;
   width: 100%;
-  box-shadow: 0px 0px 10px -1px #a6876f;
+  box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.3), -3px -3px 3px -1px rgba(166, 165, 165, 0.3);
   margin: 0 10px 10px;
   padding: 5px 10px;
   border-radius: 20px;
@@ -282,10 +285,14 @@ html {
   color: white;
 }
 
+.burger {
+  margin-bottom: 100px;
+}
+
 .lunch {
   background: white;
   color: #a6876f;
-  padding-bottom: 90px;
+  padding-bottom: 100px;
 }
 .lunch .category {
   color: #a6876f;
@@ -323,4 +330,54 @@ html {
 }
 .lunch__wrapper .item:hover {
   background: rgb(251, 243, 238);
+}
+
+.drinks {
+  padding-bottom: 100px;
+}
+.drinks .box__cold {
+  max-width: 220px;
+  width: 100%;
+}
+.drinks__box img {
+  align-self: center;
+}
+
+.kitchen {
+  background: white;
+  color: #a6876f;
+  padding-bottom: 100px;
+}
+.kitchen .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.kitchen__title {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 20px;
+}
+.kitchen .item {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.kitchen .item__text {
+  max-width: 550px;
+  padding: 0 120px 0 0;
+  width: 100%;
+}
+.kitchen .item span {
+  width: 150px;
+  align-self: center;
+}
+.kitchen .item:hover {
+  background: rgb(251, 243, 238);
+}
+.kitchen .category {
+  color: #a6876f;
+}
+.kitchen .category__line {
+  background: #a6876f;
 }/*# sourceMappingURL=main.css.map */

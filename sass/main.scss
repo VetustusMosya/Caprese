@@ -1,5 +1,6 @@
 @import url(./keyframes.css);
 $main__color: #a6876f;
+// $main__color: #6a3d34;
 // #a6876f - кофейный который
 $contrast__color: white;
 $logo__color: #6a3d34;
@@ -59,6 +60,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+//  ! .......... Header ..............
 .main {
   background: linear-gradient(
     180deg,
@@ -92,7 +94,7 @@ html {
     }
   }
 }
-//  ! .............. NAVIGATION .............
+//  ! .......... NAVIGATION .............
 .nav {
   position: sticky;
   z-index: 999;
@@ -137,7 +139,7 @@ html {
     }
   }
 }
-// !................... CATEGORY .....................
+// !............ CATEGORY .....................
 .category {
   display: flex;
   justify-content: space-between;
@@ -156,7 +158,7 @@ html {
     background: $contrast__color;
   }
 }
-// ! .............. BOX .......................
+// ! ............. BOX .......................
 .box {
   background-color: $contrast__color;
   margin: 20px;
@@ -165,7 +167,10 @@ html {
   width: 100%;
   border-radius: 20px;
   color: $main__color;
-  box-shadow: 0px 0px 26px -1px $logo__color;
+  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
+    -8px -8px 8px 0 rgba(255, 255, 255, 0.3);
+  // 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+  // -8px -8px 12px 0 rgba(0, 0, 0, 0.25) inset;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -223,9 +228,6 @@ html {
       }
     }
   }
-  &:hover .box__wrapper--img {
-    transform: rotateZ(30deg);
-  }
   &:hover .box__numbers--cost {
     background-color: $main__color;
     color: $contrast__color;
@@ -233,6 +235,13 @@ html {
 }
 // !.............. PIZZA ...................
 .pizza {
+  &__container {
+    margin-bottom: 100px;
+  }
+  &__box:hover .box__wrapper--img {
+    transform: rotateZ(30deg);
+  }
+  // ? ..............INGRIDIENTS................
   .ingridients {
     padding-bottom: 100px;
     background: $contrast__color;
@@ -255,7 +264,9 @@ html {
       justify-content: space-between;
       max-width: 400px;
       width: 100%;
-      box-shadow: 0px 0px 10px -1px $main__color;
+      // box-shadow: 0px 0px 10px -1px $main__color;
+      box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.3),
+        -3px -3px 3px -1px rgba(166, 165, 165, 0.3);
       margin: 0 10px 10px;
       padding: 5px 10px;
       border-radius: 20px;
@@ -300,13 +311,13 @@ html {
 }
 // ! ............. Burger ..............
 .burger {
-  // HAHAHAHAHAHAHAH
+  margin-bottom: 100px;
 }
-// ! ..............LUNCH.................
+// ! .............. LUNCH .................
 .lunch {
   background: $contrast__color;
   color: $main__color;
-  padding-bottom: 90px;
+  padding-bottom: 100px;
   .category {
     color: $main__color;
     display: flex;
@@ -342,6 +353,59 @@ html {
       &:hover {
         background: rgb(251, 243, 238);
       }
+    }
+  }
+}
+//  ! ............. DRINKS .............
+.drinks {
+  padding-bottom: 100px;
+  .box__cold {
+    max-width: 220px;
+    width: 100%;
+  }
+  &__box {
+    img {
+      align-self: center;
+      // width: 150px;
+    }
+  }
+}
+// ! ................ KITCHEN ..............
+.kitchen {
+  background: $contrast__color;
+  color: $main__color;
+  padding-bottom: 100px;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 20px;
+  }
+  .item {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    &__text {
+      max-width: 550px;
+      padding: 0 120px 0 0;
+      width: 100%;
+    }
+    span {
+      width: 150px;
+      align-self: center;
+    }
+    &:hover {
+      background: rgb(251, 243, 238);
+    }
+  }
+  .category {
+    color: $main__color;
+    &__line {
+      background: $main__color;
     }
   }
 }
