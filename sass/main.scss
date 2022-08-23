@@ -1,9 +1,9 @@
 @import url(./keyframes.css);
-$main__color: #a6876f;
-// $main__color: #6a3d34;
+// $main__color: #a6876f;
+$main__color: #ddcdbe;
 // #a6876f - кофейный который
 $contrast__color: white;
-$logo__color: #6a3d34;
+$logo__color: #85282a;
 // logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
 * {
   padding: 0;
@@ -93,6 +93,11 @@ html {
       font-size: 20px;
     }
   }
+  .right {
+    img {
+      // filter: ;
+    }
+  }
 }
 //  ! .......... NAVIGATION .............
 .nav {
@@ -101,22 +106,27 @@ html {
   top: 0;
   width: 100%;
   background-color: $main__color;
-  color: $contrast__color;
+  color: $logo__color;
+  font-weight: 600;
   padding: 20px 0 10px;
   .list {
     display: flex;
     justify-content: space-between;
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
     &__link {
-      padding: 5px 20px;
       border-radius: 20px;
       margin-left: 10px;
-      font-size: 20px;
+      a {
+        display: block;
+        padding: 5px 20px;
+        font-size: 20px;
+      }
       &:hover {
         background-color: $contrast__color;
-        color: $main__color;
-        box-shadow: 0px 0px 26px -1px $logo__color;
+        color: $logo__color;
+        box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3),
+          -4px -4px 4px 0 rgba(255, 255, 255, 0.3);
       }
     }
   }
@@ -145,7 +155,7 @@ html {
   justify-content: space-between;
   width: 100%;
   padding: 60px 0 10px;
-  color: $contrast__color;
+  color: $logo__color;
   align-items: center;
   font-size: 40px;
   &__title {
@@ -155,7 +165,7 @@ html {
   &__line {
     width: 100%;
     height: 4px;
-    background: $contrast__color;
+    background: $logo__color;
   }
 }
 // ! ............. BOX .......................
@@ -166,7 +176,7 @@ html {
   max-width: 280px;
   width: 100%;
   border-radius: 20px;
-  color: $main__color;
+  color: $logo__color;
   box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
     -8px -8px 8px 0 rgba(255, 255, 255, 0.3);
   // 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
@@ -230,7 +240,7 @@ html {
   }
   &:hover .box__numbers--cost {
     background-color: $main__color;
-    color: $contrast__color;
+    color: $logo__color;
   }
 }
 // !.............. PIZZA ...................
@@ -245,18 +255,18 @@ html {
   .ingridients {
     padding-bottom: 100px;
     background: $contrast__color;
-    color: $main__color;
+    color: $logo__color;
     .container {
       justify-content: space-around;
       flex-wrap: wrap;
     }
     .category {
-      color: $main__color;
+      color: $logo__color;
       padding: 20px;
       margin-bottom: 20px;
       hr {
         max-width: 340px;
-        background-color: $main__color;
+        background-color: $logo__color;
       }
     }
     &__box {
@@ -304,7 +314,7 @@ html {
       }
       &:hover .wrapper__numbers--cost {
         background-color: $main__color;
-        color: $contrast__color;
+        color: $logo__color;
       }
     }
   }
@@ -316,14 +326,14 @@ html {
 // ! .............. LUNCH .................
 .lunch {
   background: $contrast__color;
-  color: $main__color;
+  color: $logo__color;
   padding-bottom: 100px;
   .category {
-    color: $main__color;
+    color: $logo__color;
     display: flex;
     flex-direction: column;
     &__line {
-      background: $main__color;
+      background: $logo__color;
     }
   }
   &__wrapper {
@@ -373,8 +383,11 @@ html {
 // ! ................ KITCHEN ..............
 .kitchen {
   background: $contrast__color;
-  color: $main__color;
+  color: $logo__color;
   padding-bottom: 100px;
+  img {
+    width: 45%;
+  }
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -403,9 +416,9 @@ html {
     }
   }
   .category {
-    color: $main__color;
+    color: $logo__color;
     &__line {
-      background: $main__color;
+      background: $logo__color;
     }
   }
 }
