@@ -1,9 +1,9 @@
 @import url(./keyframes.css);
 // $main__color: #a6876f;
-$main__color: white;
+$main__color: #ddcdbe;
 // #a6876f - кофейный который
 $contrast__color: white;
-$logo__color: #6a3d34;
+$logo__color: #85282a;
 // logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
 * {
   padding: 0;
@@ -76,10 +76,10 @@ html {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     text-align: center;
     &--img {
-      max-width: 500px;
+      max-width: 300px;
       width: 100%;
       margin-bottom: 50px;
       // * развлекаемся с лого
@@ -93,6 +93,11 @@ html {
       font-size: 20px;
     }
   }
+  // .right {
+  //   img {
+  //     // filter: ;
+  //   }
+  // }
 }
 //  ! .......... NAVIGATION .............
 .nav {
@@ -101,12 +106,13 @@ html {
   top: 0;
   width: 100%;
   background-color: $main__color;
-  color: black;
+  color: $logo__color;
+  font-weight: 600;
   padding: 20px 0 10px;
   .list {
     display: flex;
     justify-content: space-between;
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
     &__link {
       border-radius: 20px;
@@ -118,7 +124,7 @@ html {
       }
       &:hover {
         background-color: $contrast__color;
-        color: black;
+        color: $logo__color;
         box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3),
           -4px -4px 4px 0 rgba(255, 255, 255, 0.3);
       }
@@ -149,7 +155,7 @@ html {
   justify-content: space-between;
   width: 100%;
   padding: 60px 0 10px;
-  color: $contrast__color;
+  color: $logo__color;
   align-items: center;
   font-size: 40px;
   &__title {
@@ -159,7 +165,7 @@ html {
   &__line {
     width: 100%;
     height: 4px;
-    background: $contrast__color;
+    background: $logo__color;
   }
 }
 // ! ............. BOX .......................
@@ -170,7 +176,7 @@ html {
   max-width: 280px;
   width: 100%;
   border-radius: 20px;
-  color: black;
+  color: $logo__color;
   box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
     -8px -8px 8px 0 rgba(255, 255, 255, 0.3);
   // 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
@@ -221,7 +227,7 @@ html {
       &:nth-child(odd) {
         font-weight: 900;
         padding: 5px;
-        border: 2px solid $main__color;
+        border: 2px solid $logo__color;
         border-radius: 50px;
         text-align: center;
         transition: 0.6s;
@@ -233,12 +239,15 @@ html {
     }
   }
   &:hover .box__numbers--cost {
-    background-color: $main__color;
+    background-color: $logo__color;
     color: $contrast__color;
   }
 }
 // !.............. PIZZA ...................
 .pizza {
+  // background: url(../img/0pizza__back.png) right -500px;
+  // background-size: 90%;
+
   &__container {
     margin-bottom: 100px;
   }
@@ -249,18 +258,18 @@ html {
   .ingridients {
     padding-bottom: 100px;
     background: $contrast__color;
-    color: $main__color;
+    color: $logo__color;
     .container {
       justify-content: space-around;
       flex-wrap: wrap;
     }
     .category {
-      color: $main__color;
+      color: $logo__color;
       padding: 20px;
       margin-bottom: 20px;
       hr {
         max-width: 340px;
-        background-color: $main__color;
+        background-color: $logo__color;
       }
     }
     &__box {
@@ -290,7 +299,7 @@ html {
             &:nth-child(odd) {
               font-weight: 700;
               padding: 3px;
-              border: 2px solid $main__color;
+              border: 2px solid $logo__color;
               border-radius: 50px;
               text-align: center;
               transition: 0.6s;
@@ -307,7 +316,7 @@ html {
         margin-left: 20px;
       }
       &:hover .wrapper__numbers--cost {
-        background-color: $main__color;
+        background-color: $logo__color;
         color: $contrast__color;
       }
     }
@@ -320,14 +329,13 @@ html {
 // ! .............. LUNCH .................
 .lunch {
   background: $contrast__color;
-  color: $main__color;
-  padding-bottom: 100px;
+  color: $logo__color;
   .category {
-    color: $main__color;
+    color: $logo__color;
     display: flex;
     flex-direction: column;
     &__line {
-      background: $main__color;
+      background: $logo__color;
     }
   }
   &__wrapper {
@@ -360,36 +368,28 @@ html {
     }
   }
 }
-//  ! ............. DRINKS .............
-.drinks {
-  padding-bottom: 100px;
-  .box__cold {
-    max-width: 220px;
-    width: 100%;
-  }
-  &__box {
-    img {
-      align-self: center;
-      // width: 150px;
-    }
-  }
-}
 // ! ................ KITCHEN ..............
 .kitchen {
   background: $contrast__color;
-  color: $main__color;
+  color: $logo__color;
   padding-bottom: 100px;
+  &__man {
+    width: 45%;
+    height: fit-content;
+  }
   .container {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 0;
   }
-  &__title {
-    width: 100%;
-    text-align: center;
-    margin: 30px 0 20px;
+  &__wrapper {
+    width: 50%;
+    &--title {
+      text-align: center;
+    }
   }
   .item {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -407,9 +407,9 @@ html {
     }
   }
   .category {
-    color: $main__color;
+    color: $logo__color;
     &__line {
-      background: $main__color;
+      background: $logo__color;
     }
   }
 }
