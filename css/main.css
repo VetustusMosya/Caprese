@@ -64,11 +64,10 @@ html {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
 }
 .main__block--img {
-  max-width: 500px;
+  max-width: 300px;
   width: 100%;
   margin-bottom: 50px;
   filter: sepia(0.3);
@@ -79,6 +78,7 @@ html {
   color: #85282a;
   font-size: 20px;
 }
+
 .nav {
   position: sticky;
   z-index: 999;
@@ -100,9 +100,13 @@ html {
   margin-left: 10px;
 }
 .nav .list__link a {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 5px 20px;
   font-size: 20px;
+}
+.nav .list__link a i {
+  margin-right: 5px;
 }
 .nav .list__link:hover {
   background-color: white;
@@ -203,7 +207,7 @@ html {
 .box__numbers span:nth-child(odd) {
   font-weight: 900;
   padding: 5px;
-  border: 2px solid #ddcdbe;
+  border: 2px solid #85282a;
   border-radius: 50px;
   text-align: center;
   transition: 0.6s;
@@ -213,8 +217,8 @@ html {
   padding: 5px 0;
 }
 .box:hover .box__numbers--cost {
-  background-color: #ddcdbe;
-  color: #85282a;
+  background-color: #85282a;
+  color: white;
 }
 
 .pizza__container {
@@ -270,7 +274,7 @@ html {
 .pizza .ingridients__box .wrapper__numbers span:nth-child(odd) {
   font-weight: 700;
   padding: 3px;
-  border: 2px solid #ddcdbe;
+  border: 2px solid #85282a;
   border-radius: 50px;
   text-align: center;
   transition: 0.6s;
@@ -284,8 +288,8 @@ html {
   margin-left: 20px;
 }
 .pizza .ingridients__box:hover .wrapper__numbers--cost {
-  background-color: #ddcdbe;
-  color: #85282a;
+  background-color: #85282a;
+  color: white;
 }
 
 .burger {
@@ -295,7 +299,6 @@ html {
 .lunch {
   background: white;
   color: #85282a;
-  padding-bottom: 100px;
 }
 .lunch .category {
   color: #85282a;
@@ -335,36 +338,28 @@ html {
   background: rgb(251, 243, 238);
 }
 
-.drinks {
-  padding-bottom: 100px;
-}
-.drinks .box__cold {
-  max-width: 220px;
-  width: 100%;
-}
-.drinks__box img {
-  align-self: center;
-}
-
 .kitchen {
   background: white;
   color: #85282a;
   padding-bottom: 100px;
 }
-.kitchen img {
+.kitchen__man {
   width: 45%;
+  height: fit-content;
 }
 .kitchen .container {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px 0;
 }
-.kitchen__title {
-  width: 100%;
+.kitchen__wrapper {
+  width: 50%;
+}
+.kitchen__wrapper--title {
   text-align: center;
-  margin: 30px 0 20px;
 }
 .kitchen .item {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
