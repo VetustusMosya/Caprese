@@ -58,18 +58,35 @@ html {
 .main {
   background: linear-gradient(180deg, white, 90%, #ddcdbe, 99.9%, #ddcdbe);
   background-size: cover;
-  height: 74ch;
+  padding-bottom: 100px;
+}
+.main .container {
+  position: relative;
+}
+.main__header {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__header img {
+  margin: 0 30px;
+}
+.main__header hr {
+  background-color: #85282a;
+  height: 4px;
+  width: 100%;
 }
 .main__block {
   width: 50%;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
 }
 .main__block--img {
   max-width: 300px;
   width: 100%;
-  margin-bottom: 50px;
   filter: sepia(0.3);
 }
 .main__block--text {
@@ -377,4 +394,19 @@ html {
 }
 .kitchen .category__line {
   background: #85282a;
+}
+.kitchen .kitchen__drinks {
+  width: 33%;
+}
+.kitchen .kitchen__drinks .item__text {
+  padding: 0;
+}
+.kitchen .kitchen__drinks .item span {
+  display: none;
+}
+.kitchen .kitchen__drinks--img {
+  width: 33%;
+}
+.kitchen .alcogol {
+  text-align: end;
 }/*# sourceMappingURL=main.css.map */
