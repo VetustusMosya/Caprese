@@ -1,10 +1,16 @@
 @import url(./keyframes.css);
-// $main__color: #a6876f;
-$main__color: #ddcdbe;
-// #a6876f - кофейный который
+$main__color: white;
+$text__color: #85282a;
 $contrast__color: white;
 $logo__color: #85282a;
+$little__shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3),
+  -4px -4px 4px 0 rgba(166, 165, 165, 0.3);
+$big__shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
+  -8px -8px 8px 0 rgba(166, 165, 165, 0.3);
+
+// #a6876f - кофейный который
 // logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
+
 * {
   padding: 0;
   margin: 0;
@@ -31,6 +37,10 @@ img {
   height: auto;
 }
 
+hr {
+  border: none;
+}
+
 button {
   border: none;
   background: transparent;
@@ -47,9 +57,10 @@ nav {
 }
 
 html {
-  background-color: $main__color;
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
+  background: fixed url(../img/bg__2.webp) no-repeat;
+  background-size: 100%;
 }
 
 .container {
@@ -60,68 +71,30 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-//  ! .......... Header ..............
+//  ! .......... MAIN ..............
 .main {
-  background: linear-gradient(
-    180deg,
-    $contrast__color,
-    90%,
-    $main__color,
-    99.9%,
-    $main__color
-  );
-  background-size: cover;
-  padding-bottom: 100px;
+  // background: linear-gradient(
+  //   180deg,
+  //   $contrast__color,
+  //   90%,
+  //   $main__color,
+  //   99.9%,
+  //   $main__color
+  // );
+  // background-size: cover;
+  height: 90vh;
+  padding: 20px 0 100px;
   .container {
-    position: relative;
+    justify-content: center;
   }
-  &__header {
-    padding: 20px 0;
+  &__logo {
+    max-width: 400px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      margin: 0 30px;
-    }
-    hr {
-      background-color: $logo__color;
-      height: 4px;
-      width: 100%;
-    }
+    // * развлекаемся с лого
+    // filter: hue-rotate(45deg);
+    filter: sepia(0.3);
+    animation: appearan 1.5s 10ms ease-out;
   }
-  &__block {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &--img {
-      max-width: 300px;
-      width: 100%;
-      // margin-bottom: 50px;
-      // * развлекаемся с лого
-      // filter: hue-rotate(45deg);
-      filter: sepia(0.3);
-    }
-    &--text {
-      max-width: 500px;
-      width: 100%;
-      color: $logo__color;
-      font-size: 20px;
-    }
-  }
-  // .left {
-  //   position: relative;
-  //   img {
-  //     position: absolute;
-  //     top: 20px;
-  //     left: 50%;
-  //     transform: translateX(50%);
-  //   }
-  // }
-  // .right {
-  //   margin: 30px 0 0px;
-  // }
 }
 //  ! .......... NAVIGATION .............
 .nav {
@@ -130,7 +103,7 @@ html {
   top: 0;
   width: 100%;
   background-color: $main__color;
-  color: $logo__color;
+  color: $text__color;
   font-weight: 600;
   padding: 20px 0 10px;
   .list {
@@ -147,10 +120,7 @@ html {
         font-size: 20px;
       }
       &:hover {
-        background-color: $contrast__color;
-        color: $logo__color;
-        box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3),
-          -4px -4px 4px 0 rgba(255, 255, 255, 0.3);
+        box-shadow: $little__shadow;
       }
     }
   }
@@ -194,17 +164,14 @@ html {
 }
 // ! ............. BOX .......................
 .box {
-  background-color: $contrast__color;
+  background-color: $main__color;
   margin: 20px;
   padding: 20px;
   max-width: 280px;
   width: 100%;
   border-radius: 20px;
-  color: $logo__color;
-  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
-    -8px -8px 8px 0 rgba(255, 255, 255, 0.3);
-  // 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
-  // -8px -8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+  color: $text__color;
+  box-shadow: $big__shadow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -251,7 +218,7 @@ html {
       &:nth-child(odd) {
         font-weight: 900;
         padding: 5px;
-        border: 2px solid $logo__color;
+        border: 2px solid $text__color;
         border-radius: 50px;
         text-align: center;
         transition: 0.6s;
@@ -263,15 +230,13 @@ html {
     }
   }
   &:hover .box__numbers--cost {
-    background-color: $logo__color;
-    color: $contrast__color;
+    background-color: $text__color;
+    color: $main__color;
   }
 }
 // !.............. PIZZA ...................
 .pizza {
-  // background: url(../img/0pizza__back.png) right -500px;
-  // background-size: 90%;
-
+  background: $main__color;
   &__container {
     margin-bottom: 100px;
   }
@@ -282,18 +247,18 @@ html {
   .ingridients {
     padding-bottom: 100px;
     background: $contrast__color;
-    color: $logo__color;
+    color: $text__color;
     .container {
       justify-content: space-around;
       flex-wrap: wrap;
     }
     .category {
-      color: $logo__color;
+      color: $text__color;
       padding: 20px;
       margin-bottom: 20px;
       hr {
         max-width: 340px;
-        background-color: $logo__color;
+        background-color: $text__color;
       }
     }
     &__box {
@@ -301,9 +266,7 @@ html {
       justify-content: space-between;
       max-width: 400px;
       width: 100%;
-      // box-shadow: 0px 0px 10px -1px $main__color;
-      box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.3),
-        -3px -3px 3px -1px rgba(166, 165, 165, 0.3);
+      box-shadow: $little__shadow;
       margin: 0 10px 10px;
       padding: 5px 10px;
       border-radius: 20px;
@@ -323,7 +286,7 @@ html {
             &:nth-child(odd) {
               font-weight: 700;
               padding: 3px;
-              border: 2px solid $logo__color;
+              border: 2px solid $text__color;
               border-radius: 50px;
               text-align: center;
               transition: 0.6s;
@@ -340,15 +303,16 @@ html {
         margin-left: 20px;
       }
       &:hover .wrapper__numbers--cost {
-        background-color: $logo__color;
-        color: $contrast__color;
+        background-color: $text__color;
+        color: $main__color;
       }
     }
   }
 }
 // ! ............. Burger ..............
 .burger {
-  margin-bottom: 100px;
+  background: $main__color;
+  padding-bottom: 100px;
 }
 // ! .............. LUNCH .................
 .lunch {
@@ -386,16 +350,13 @@ html {
         width: 150px;
         align-self: center;
       }
-      &:hover {
-        background: rgb(251, 243, 238);
-      }
     }
   }
 }
 // ! ................ KITCHEN ..............
 .kitchen {
-  background: $contrast__color;
-  color: $logo__color;
+  background: $main__color;
+  color: $text__color;
   padding-bottom: 100px;
   .container {
     display: flex;
@@ -411,7 +372,6 @@ html {
       text-align: center;
     }
   }
-
   .item {
     width: 100%;
     display: flex;
@@ -424,14 +384,11 @@ html {
       margin-left: 10px;
       align-self: center;
     }
-    &:hover {
-      background: rgb(251, 243, 238);
-    }
   }
   .category {
-    color: $logo__color;
+    color: $text__color;
     &__line {
-      background: $logo__color;
+      background: $text__color;
     }
   }
   &__drinks {

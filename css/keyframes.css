@@ -9,3 +9,12 @@
     transform: rotateY(360deg);
   }
 }
+@keyframes appearan {
+  from {
+    opacity: 0;
+    padding: 300px 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
