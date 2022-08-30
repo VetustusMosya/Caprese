@@ -47,7 +47,7 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__2.webp) no-repeat;
+  background: fixed url(../img/bg__3.jpg) no-repeat;
   background-size: 100%;
 }
 
@@ -61,6 +61,7 @@ html {
 }
 
 .main {
+  background: linear-gradient(180deg, transparent, 90%, transparent, 98%, white);
   height: 90vh;
   padding: 20px 0 100px;
 }
@@ -71,7 +72,8 @@ html {
   max-width: 400px;
   width: 100%;
   filter: sepia(0.3);
-  animation: appearan 1.5s 10ms ease-out;
+  opacity: 0;
+  animation: appearan 1.5s 100ms ease-out forwards;
 }
 
 .nav {
@@ -221,7 +223,6 @@ html {
 }
 .pizza .ingridients {
   padding-bottom: 100px;
-  background: white;
   color: #85282a;
 }
 .pizza .ingridients .container {
@@ -285,7 +286,7 @@ html {
 }
 
 .burger {
-  background: white;
+  background: #85282a;
   padding-bottom: 100px;
 }
 
@@ -320,11 +321,9 @@ html {
 }
 .lunch__wrapper .item__text {
   max-width: 550px;
-  padding: 0 120px 0 0;
   width: 100%;
 }
 .lunch__wrapper .item span {
-  width: 150px;
   align-self: center;
 }
 

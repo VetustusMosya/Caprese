@@ -11,6 +11,8 @@ $big__shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
 // #a6876f - кофейный который
 // logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
 
+// TODO different bg on pc & phone
+
 * {
   padding: 0;
   margin: 0;
@@ -59,7 +61,7 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__2.webp) no-repeat;
+  background: fixed url(../img/bg__3.jpg) no-repeat;
   background-size: 100%;
 }
 
@@ -73,15 +75,14 @@ html {
 }
 //  ! .......... MAIN ..............
 .main {
-  // background: linear-gradient(
-  //   180deg,
-  //   $contrast__color,
-  //   90%,
-  //   $main__color,
-  //   99.9%,
-  //   $main__color
-  // );
-  // background-size: cover;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    90%,
+    transparent,
+    98%,
+    $main__color
+  );
   height: 90vh;
   padding: 20px 0 100px;
   .container {
@@ -93,7 +94,8 @@ html {
     // * развлекаемся с лого
     // filter: hue-rotate(45deg);
     filter: sepia(0.3);
-    animation: appearan 1.5s 10ms ease-out;
+    opacity: 0;
+    animation: appearan 1.5s 100ms ease-out forwards;
   }
 }
 //  ! .......... NAVIGATION .............
@@ -149,7 +151,7 @@ html {
   justify-content: space-between;
   width: 100%;
   padding: 60px 0 10px;
-  color: $logo__color;
+  color: $text__color;
   align-items: center;
   font-size: 40px;
   &__title {
@@ -159,7 +161,7 @@ html {
   &__line {
     width: 100%;
     height: 4px;
-    background: $logo__color;
+    background: $text__color;
   }
 }
 // ! ............. BOX .......................
@@ -246,7 +248,6 @@ html {
   // ? ..............INGRIDIENTS................
   .ingridients {
     padding-bottom: 100px;
-    background: $contrast__color;
     color: $text__color;
     .container {
       justify-content: space-around;
@@ -311,7 +312,7 @@ html {
 }
 // ! ............. Burger ..............
 .burger {
-  background: $main__color;
+  background: $logo__color;
   padding-bottom: 100px;
 }
 // ! .............. LUNCH .................
@@ -343,11 +344,9 @@ html {
       padding: 10px 20px;
       &__text {
         max-width: 550px;
-        padding: 0 120px 0 0;
         width: 100%;
       }
       span {
-        width: 150px;
         align-self: center;
       }
     }
