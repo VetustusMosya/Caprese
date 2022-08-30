@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
     <link href="./css/main.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./img/logo__little.png" type="image/png" />
     <title> Кафе Caprese</title>
@@ -22,8 +26,18 @@
     <div class="main">
       <div class="container">        
         <img class="main__logo" src="./img/logo.png" alt="Caprese" />
-        <div class="slider">
-          
+        
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./img/slider__1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/slider__2.jpg" alt=""></div>          
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
         </div>
       </div>
     </div>
@@ -1547,6 +1561,7 @@
         </div>
       </div>
     </section>
-    <script src="./js/scirpts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/scirpts.js"></script>    
   </body>
 </html>

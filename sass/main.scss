@@ -62,7 +62,7 @@ html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
   background: fixed url(../img/bg__3.jpg) no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .container {
@@ -72,6 +72,12 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.swiper {
+  width: 600px;
+  height: 700px;
+  display: none;
 }
 //  ! .......... MAIN ..............
 .main {
@@ -87,10 +93,12 @@ html {
   padding: 20px 0 100px;
   .container {
     justify-content: center;
+    // flex-direction: column;
   }
   &__logo {
     max-width: 400px;
     width: 100%;
+    align-self: center;
     // * развлекаемся с лого
     // filter: hue-rotate(45deg);
     filter: sepia(0.3);
@@ -111,7 +119,7 @@ html {
   .list {
     display: flex;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     &__link {
       border-radius: 20px;
