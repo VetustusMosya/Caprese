@@ -1,7 +1,5 @@
-<!-- пицца сделай сам 
- -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,10 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
     <link href="./css/main.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./img/logo__little.png" type="image/png" />
     <title> Кафе Caprese</title>
@@ -26,22 +20,9 @@
     <div class="main">
       <div class="container">        
         <img class="main__logo" src="./img/logo.png" alt="Caprese" />
-        
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img src="./img/slider__1.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/slider__2.jpg" alt=""></div>          
-          </div>
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        
-        </div>
       </div>
     </div>
-    <!-- ? ............... NAVIGATION ................ -->
+    <!-- ! ............... NAVIGATION ................ -->
     <section class="nav">
       <div class="container">
         <nav class="nav--list list">
@@ -57,13 +38,13 @@
             <i class="fa-solid fa-plate-wheat"></i>
             Обеды</a>
           </li>
-          <li class="list__link"><a href="#kitchen"> 
-            <i class="fa fa-solid fa-utensils"></i>       
-            Кухня</a>
-          </li>
           <li class="list__link"><a href="#drinks"> 
             <i class="fa fa-solid fa-martini-glass-citrus"></i>   
             Напитки</a>
+          </li>
+          <li class="list__link"><a href="#kitchen"> 
+            <i class="fa fa-solid fa-utensils"></i>       
+            Кухня</a>
           </li>
         </nav>
         <h1 class="nav--delivery delivery">
@@ -281,6 +262,11 @@
         </div>
         <div class="pizza__box box">
           <div class="box__wrapper">
+            <img
+              class="box__wrapper--pepper"
+              src=".//img/pepper.png"
+              alt="острая"
+            />
             <img src="./img/meet.png" alt="pizza" class="box__wrapper--img" />
             <h3 class="box__wrapper--title">Мясная</h3>
             <p class="box__wrapper--text">
@@ -419,6 +405,11 @@
         </div>
         <div class="pizza__box box">
           <div class="box__wrapper">
+            <img
+              class="box__wrapper--pepper"
+              src=".//img/pepper.png"
+              alt="острая"
+            />
             <img src="./img/hunter.png" alt="pizza" class="box__wrapper--img" />
             <h3 class="box__wrapper--title">Охотничья</h3>
             <p class="box__wrapper--text">
@@ -620,7 +611,7 @@
             </div>
             <img
               class="ingridients__box--img"
-              src="./img/ananas.png"
+              src="./img/pig.png"
               alt="ananas"
             />
           </div>
@@ -784,7 +775,55 @@
     <!-- ! ................. BURGER ...................... -->
     <section class="burger"  id="burger">
       <div class="container">
-        <div class="category">
+        <div class="burger__wrapper">
+          <div class="category">
+            <hr class="category__line" />
+            <h1 class="category__title">
+              <i class="fa-solid fa-burger"></i> Burger</h1>
+            <hr class="category__line" />
+          </div>
+          <div class="lanch__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Салат Оливье</h3>
+              <p class="item__text--info">
+                Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
+              </p>
+            </div>
+            <span class="item__gramm">150  </span>
+            <span class="item__cost">3,50  </span>
+          </div>
+          <div class="lanch__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Салат Оливье</h3>
+              <p class="item__text--info">
+                Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
+              </p>
+            </div>
+            <span class="item__gramm">150  </span>
+            <span class="item__cost">3,50  </span>
+          </div>
+          <div class="lanch__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Салат Оливье</h3>
+              <p class="item__text--info">
+                Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
+              </p>
+            </div>
+            <span class="item__gramm">150  </span>
+            <span class="item__cost">3,50  </span>
+          </div>
+          <div class="lanch__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Салат Оливье</h3>
+              <p class="item__text--info">
+                Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
+              </p>
+            </div>
+            <span class="item__gramm">150  </span>
+            <span class="item__cost">3,50  </span>
+          </div>
+        </div>
+        <!-- <div class="category">
           <hr class="category__line" />
           <h1 class="category__title">
             <i class="fa-solid fa-burger"></i> Burger</h1>
@@ -861,7 +900,7 @@
             <span class="box__numbers--cost">12 BYN</span>
             <span>360 г.</span>
           </div>
-        </div>
+        </div> -->
       </div>
       </div>
     </section>
@@ -1125,364 +1164,21 @@
         </div>
       </div>
     </section>
-    <!-- ! ................ KITCHEN .................... -->
-    <section class="kitchen" id="kitchen">      
-        <!-- ? ........... Закуски ................. -->     
-      <div class="container">
-        <div class="category">
-          <hr class="category__line" />
-          <h1 class="category__title">
-            <i class="fa fa-solid fa-utensils"></i>Кухня</h1>
-          <hr class="category__line" />
-        </div>     
-        <img class="kitchen__man" src="./img/salat__man.jpg" alt="">      
-        <div class="kitchen__wrapper">
-          <h2 class="kitchen__wrapper--title">Закуски</h2>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Оливье</h3>
-              <p class="item__text--info">
-                Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
-              </p>
-            </div>
-            <span class="item__gramm">150</span>
-            <span class="item__cost">3,50</span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150</span>
-            <span class="item__cost">3,20</span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150  </span>
-            <span class="item__cost">3,20  </span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150  </span>
-            <span class="item__cost">3,20  </span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150  </span>
-            <span class="item__cost">3,20  </span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150  </span>
-            <span class="item__cost">3,20  </span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150  </span>
-            <span class="item__cost">3,20  </span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150  </span>
-            <span class="item__cost">3,20  </span>
-          </div>
-        </div>
-      </div>
-        <!-- ?............... Салаты .................. -->        
-      <div class="container">
-        <div class="kitchen__wrapper">
-          <h2 class="kitchen__wrapper--title">Салаты</h2>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Оливье</h3>
-            <p class="item__text--info">
-              Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
-            </p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,50  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div> 
-        </div>             
-        <img class="kitchen__man" src="./img/snacks__man.jpg" alt="">     
-      </div> 
-        <!-- ? .................. HOT .............. -->
+    <!-- ! .............. НАПИТКИ .................. -->
+    <section class="drinks" id="drinks">
       <div class="container">        
-        <img class="kitchen__man" src="./img/hot__man.jpg" alt="">      
-        <div class="kitchen__wrapper">
-          <h2 class="kitchen__wrapper--title">Горячие блюда</h2>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Оливье</h3>
-            <p class="item__text--info">
-              Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
-            </p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,50  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-        <div class="kitchen__wrapper--item item">
-          <div class="item__text">
-            <h3 class="item__text__name">Салат Фермерская</h3>
-            <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-          </div>
-          <span class="item__gramm">150  </span>
-          <span class="item__cost">3,20  </span>
-        </div>
-      </div>
-      </div>
-      <!-- ? ............ ДЕСЕРТЫ .................... -->
-      <div class="container">
-        <div class="kitchen__wrapper">
-          <h2 class="kitchen__wrapper--title">Десерты</h2>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-                <h3 class="item__text__name">Салат Оливье</h3>
-                <p class="item__text--info">
-                  Ветчина, огурец, морковь, картофель, горошек, майонез, зелень
-                </p>
-              </div>
-              <span class="item__gramm">150  </span>
-              <span class="item__cost">3,50  </span>
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <div class="item__text">
-              <h3 class="item__text__name">Салат Фермерская</h3>
-              <p class="item__text--info">Томаты, огурцы, зелень, сметана</p>
-            </div>
-            <span class="item__gramm">150  </span>
-            <span class="item__cost">3,20  </span>
-          </div>
-          <h2 class="kitchen__wrapper--title">Работаем над пониками...</h2>          
-        </div>             
-        <img class="kitchen__man" src="./img/desert_man.jpg" alt="">     
-      </div> 
-      <!-- ? .............. НАПИТКИ .................. -->
-      <div class="container container__drinks">
-        <div class="category" id="drinks">
-          <hr class="category__line" />
-          <h1 class="category__title">
-            <i class="fa fa-solid fa-martini-glass-citrus"></i> 
-            Напитки</h1>
-          <hr class="category__line" />
-        </div>
-        <!-- ? .................. ALCOGOL ....................... -->
-        <div class="kitchen__wrapper kitchen__drinks">
-          <!-- *...............ПИВО ЕПТА ................ -->
-          <h2 class="kitchen__wrapper--title">Пиво</h2>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Кола, Фанта, Спрайт</h3>
-            <span class="item__gramm">500</span>
-            <!-- <span class="item__cost">3,00</span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Бонаква</h3>
-            <span class="item__gramm">500 </span>
-            <!-- <span class="item__cost">2,00 </span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Слки RICH</h3>
-            <span class="item__gramm">250</span>
-            <!-- <span class="item__cost">2,00</span> -->
+        <div class="drinks__wrapper ">
+          <div class="category">
+            <hr class="category__line" />
+            <h1 class="category__title">
+              <i class="fa fa-solid fa-martini-glass-citrus"></i> 
+              Напитки</h1>
+            <hr class="category__line" />
           </div>
           <div class="kitchen__wrapper--item item">
             <h3 class="item__text">Кола, Фанта, Спрайт</h3>
             <span class="item__gramm">500</span>
-            <!-- <span class="item__cost">3,00</span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Бонаква</h3>
-            <span class="item__gramm">500 </span>
-            <!-- <span class="item__cost">2,00 </span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Слки RICH</h3>
-            <span class="item__gramm">250</span>
-            <!-- <span class="item__cost">2,00</span> -->
-          </div>
-          <!-- * ............ Вино ............... -->
-          <h2 class="kitchen__wrapper--title">Вино</h2>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Эспрессо</h3>
-            <span class="item__gramm">50</span>
-            <!-- <span class="item__cost">2,80</span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Американо</h3>
-            <span class="item__gramm">120</span>
-            <!-- <span class="item__cost">2,80</span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Капучино</h3>
-            <span class="item__gramm">120</span>
-            <!-- <span class="item__cost">4,00</span> -->
-          </div>
-          <!-- * ................ Водка ............... -->
-          <h2 class="kitchen__wrapper--title">Водка</h2>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Черный лмстовой</h3>
-            <span class="item__gramm">50</span>
-            <!-- <span class="item__cost">2,80</span> -->
-          </div>
-          <!-- * ................ Настойки ............... -->
-          <h2 class="kitchen__wrapper--title">Настойки</h2>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Эспрессо</h3>
-            <span class="item__gramm">50</span>
-            <!-- <span class="item__cost">2,80</span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Американо</h3>
-            <span class="item__gramm">120</span>
-            <!-- <span class="item__cost">2,80</span> -->
-          </div>
-          <!-- * ................ Коньяк ................. -->
-          <h2 class="kitchen__wrapper--title">Коньяк</h2>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Эспрессо</h3>
-            <span class="item__gramm">50</span>
-            <!-- <span class="item__cost">2,80</span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Американо</h3>
-            <span class="item__gramm">120</span>
-            <!-- <span class="item__cost">2,80</span> -->
-          </div>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Капучино</h3>
-            <span class="item__gramm">120</span>
-            <!-- <span class="item__cost">4,00</span> -->
-          </div>
-        </div>
-        <img class="kitchen__man kitchen__drinks--img" src="./img/barmen_men.jpg" alt=""> 
-        <!-- ? ................... БЕЗАЛКОГОЛЬ ....................... -->
-        <div class="kitchen__wrapper kitchen__drinks">
-          <h2 class="kitchen__wrapper--title">Безалкогольные</h2>
-          <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Кола, Фанта, Спрайт</h3>
-            <span class="item__gramm">500</span>
-            <span class="item__cost">3,00</span>
+            <span class="item__cost">4,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
             <h3 class="item__text">Бонаква</h3>
@@ -1490,7 +1186,7 @@
             <span class="item__cost">2,00 </span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Слки RICH</h3>
+            <h3 class="item__text">Соки RICH</h3>
             <span class="item__gramm">250</span>
             <span class="item__cost">2,00</span>
           </div>
@@ -1519,49 +1215,323 @@
           <!-- * ................ TEA ............... -->
           <h2 class="kitchen__wrapper--title">Чай</h2>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Черный лмстовой</h3>
-            <span class="item__gramm">50</span>
-            <span class="item__cost">2,80</span>
+            <h3 class="item__text">Черный листовой</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">3,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Американо</h3>
-            <span class="item__gramm">120</span>
-            <span class="item__cost">2,80</span>
+            <h3 class="item__text">Черный Цейлонский</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">3,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Капучино</h3>
-            <span class="item__gramm">120</span>
-            <span class="item__cost">4,00</span>
+            <h3 class="item__text">Черный с бергамотом</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">3,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Латте</h3>
-            <span class="item__gramm">150</span>
-            <span class="item__cost">4,50</span>
+            <h3 class="item__text">Зеленный</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">3,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Черный лмстовой</h3>
-            <span class="item__gramm">50</span>
-            <span class="item__cost">2,80</span>
+            <h3 class="item__text">Зеленный с мятой</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">3,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Американо</h3>
-            <span class="item__gramm">120</span>
-            <span class="item__cost">2,80</span>
+            <h3 class="item__text">Китайский жасмин</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">3,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Капучино</h3>
-            <span class="item__gramm">120</span>
-            <span class="item__cost">4,00</span>
+            <h3 class="item__text">Фруктовый</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">3,00</span>
           </div>
           <div class="kitchen__wrapper--item item">
-            <h3 class="item__text">Латте</h3>
-            <span class="item__gramm">150</span>
-            <span class="item__cost">4,50</span>
+            <h3 class="item__text">Облипиховый</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">5,00</span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <h3 class="item__text">Имбирный</h3>
+            <span class="item__gramm">500</span>
+            <span class="item__cost">5,00</span>
           </div>
         </div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- ! ................ KITCHEN .................... -->
+    <section class="kitchen" id="kitchen">      
+        <!-- ? ........... Закуски ................. -->     
+      <div class="container">
+        <div class="category">
+          <hr class="category__line" />
+          <h1 class="category__title">
+            <i class="fa fa-solid fa-utensils"></i>Кухня</h1>
+          <hr class="category__line" />
+        </div>     
+        <img class="kitchen__man" src="./img/salat__man.jpg" alt="">      
+        <div class="kitchen__wrapper">
+          <h2 class="kitchen__wrapper--title">Закуски</h2>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Закуска из мясных копченостей</h3>
+              <p class="item__text--info">
+                Ветчина, рулет филейный, грудинка, колбаса, хрен, маслины, зелень
+              </p>
+            </div>
+            <span class="item__gramm">270</span>
+            <span class="item__cost">13,00</span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Сырные палочки</h3>
+              <p class="item__text--info">сыр Моцарелла в хрустящей корочке с соусом</p>
+            </div>
+            <span class="item__gramm">180</span>
+            <span class="item__cost">8,5</span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Сырное плато</h3>
+              <p class="item__text--info">сыр Дор Блю, сыр Моцарелла взаливке, Фета, Пармезан, оливки, мед, грецкий орех</p>
+            </div>
+            <span class="item__gramm">220  </span>
+            <span class="item__cost">15,0  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Куриные наггетсы</h3>
+              <p class="item__text--info">Куриное филе в хрустящей панировке с соусом</p>
+            </div>
+            <span class="item__gramm">180  </span>
+            <span class="item__cost">9,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Букет из свежих овощей</h3>
+              <p class="item__text--info">Огурец, томаты, перец, оливки, зелень</p>
+            </div>
+            <span class="item__gramm">270  </span>
+            <span class="item__cost">9,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Хворост к пиву</h3>
+              <p class="item__text--info">Чесночные гренки из Бородинского хлеба с соусом</p>
+            </div>
+            <span class="item__gramm">300  </span>
+            <span class="item__cost">6,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Сельдь по-домашнему</h3>
+              <p class="item__text--info">филе Сельди, картофельные дольки, лук маринованный, чесночные гренки из Бородинского хлеба, соус Тар-тар, зелень</p>
+            </div>
+            <span class="item__gramm">310  </span>
+            <span class="item__cost">10,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Закуска к пиву</h3>
+              <p class="item__text--info">гренки из Бородинского хлеба, куриные наггетсы, сырные палочки, соус Ранч, соус горчичный, зелень </p>
+            </div>
+            <span class="item__gramm">300  </span>
+            <span class="item__cost">12,0  </span>
+          </div>
+        </div>
+      </div>
+        <!-- ?............... Салаты .................. -->        
+      <div class="container">
+        <div class="kitchen__wrapper">
+          <h2 class="kitchen__wrapper--title">Салаты</h2>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Греческий с фета</h3>
+            <p class="item__text--info">
+              Томат, огурец, перец, лук красный, фета, соус из залени, оливки
+            </p>
+            </div>
+            <span class="item__gramm">250  </span>
+            <span class="item__cost">9,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Цезарь с курицей</h3>
+              <p class="item__text--info">Филе куриное, яйцо, томат, малат Айсберг, крутоны, сыр Джугас</p>
+            </div>
+            <span class="item__gramm">260  </span>
+            <span class="item__cost">11,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Капрезе</h3>
+              <p class="item__text--info">Томат, Моцарелла в заливке, Айсберг, сыр Базилик</p>
+            </div>
+            <span class="item__gramm">230  </span>
+            <span class="item__cost">7,50  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Теплый мясной </h3>
+              <p class="item__text--info">Говядина, шампиньоны, перец, салат Айсберг, соус с французской горчицей, сыр Джугас</p>
+            </div>
+            <span class="item__gramm">260  </span>
+            <span class="item__cost">14,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Салат Фермерский</h3>
+              <p class="item__text--info">Томат, огурец, зеленный лук, сметана, зелень</p>
+            </div>
+            <span class="item__gramm">235  </span>
+            <span class="item__cost">9,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Цезарь с креветками</h3>
+              <p class="item__text--info">Айсберг, креветки, яйцо, томат, крутоны, соус Цезарь, сыр Джугас</p>
+            </div>
+            <span class="item__gramm">260  </span>
+            <span class="item__cost">16,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Неаполь</h3>
+              <p class="item__text--info">Обжаренная саринованная свинная вырезка, томаты, огурец, Айсберг, шампиньоны, заправка Французская</p>
+            </div>
+            <span class="item__gramm">250  </span>
+            <span class="item__cost">12,00  </span>
+          </div>
+        </div>             
+        <img class="kitchen__man" src="./img/snacks__man.jpg" alt="">     
+      </div> 
+        <!-- ? .................. HOT .............. -->
+      <div class="container">        
+        <img class="kitchen__man" src="./img/hot__man.jpg" alt="">      
+        <div class="kitchen__wrapper">
+          <h2 class="kitchen__wrapper--title">Горячие блюда</h2>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Блюдо дня</h3>
+            <p class="item__text--info">
+              Спрашивайте у официанта
+            </p>
+          </div>
+          <span class="item__gramm">  </span>
+          <span class="item__cost">12,00  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Паста грибная</h3>
+            <p class="item__text--info">Феттучини, вешанки, шампиньоны, лук карамелизованный, сливки, сыр Пармезан</p>
+          </div>
+          <span class="item__gramm">300  </span>
+          <span class="item__cost">11,00  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Шницель с яйцом</h3>
+            <p class="item__text--info">Свинина полендвица, французская заправка, сухари Панко, яйца</p>
+          </div>
+          <span class="item__gramm">230  </span>
+          <span class="item__cost">13,00  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Паста Карбонара</h3>
+            <p class="item__text--info">Фетучини, бекон, лук карамелизированный, сливочно-яичный соус, сыр Пармезан</p>
+          </div>
+          <span class="item__gramm">350  </span>
+          <span class="item__cost">11,00  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Жульен</h3>
+            <p class="item__text--info">Филе куриное, ветчина, грудинка, шампиньоны, лук, сметана, сливки</p>
+          </div>
+          <span class="item__gramm">230  </span>
+          <span class="item__cost">9,50  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Драники со сметаной</h3>
+            <p class="item__text--info">Картофельные оладьи, сметана, зелень</p>
+          </div>
+          <span class="item__gramm">390  </span>
+          <span class="item__cost">8,5  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Драники с птицей и чесночным соусом</h3>
+            <p class="item__text--info">Картофельные оладьи, филе куриное, чесночный соус, зелень</p>
+          </div>
+          <span class="item__gramm">380  </span>
+          <span class="item__cost">3,20  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Драники по-домашнему</h3>
+            <p class="item__text--info">Картофельные оладьи, филе куриное, ветчина, грудинка, шампиньоны, лук, сливки, сметана</p>
+          </div>
+          <span class="item__gramm">460  </span>
+          <span class="item__cost">16,00  </span>
+        </div>      
+      </div>
+      </div>
+      <!-- ? ............ ДЕСЕРТЫ .................... -->
+      <div class="container">
+        <div class="kitchen__wrapper">                    
+        <h2 class="kitchen__wrapper--title">Гарниры</h2>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Драники со сметаной</h3>
+            <p class="item__text--info">Картофельные оладьи, сметана, зелень</p>
+          </div>
+          <span class="item__gramm">390  </span>
+          <span class="item__cost">8,5  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Драники с птицей и чесночным соусом</h3>
+            <p class="item__text--info">Картофельные оладьи, филе куриное, чесночный соус, зелень</p>
+          </div>
+          <span class="item__gramm">380  </span>
+          <span class="item__cost">3,20  </span>
+        </div>
+        <div class="kitchen__wrapper--item item">
+          <div class="item__text">
+            <h3 class="item__text__name">Драники по-домашнему</h3>
+            <p class="item__text--info">Картофельные оладьи, филе куриное, ветчина, грудинка, шампиньоны, лук, сливки, сметана</p>
+          </div>
+          <span class="item__gramm">460  </span>
+          <span class="item__cost">16,00  </span>
+        </div>          
+          <h2 class="kitchen__wrapper--title">Десерты</h2>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+                <h3 class="item__text__name">Десерт дня</h3>
+                <p class="item__text--info">
+                  Спрашивать у официанта
+                </p>
+              </div>
+              <span class="item__gramm">100  </span>
+              <span class="item__cost">5,00  </span>
+          </div>
+          <div class="kitchen__wrapper--item item">
+            <div class="item__text">
+              <h3 class="item__text__name">Мороженое с топпингом</h3>
+            </div>
+            <span class="item__gramm">150/2  </span>
+            <span class="item__cost">5,00  </span>
+          </div>
+          <h2 class="kitchen__wrapper--title">Работаем над пончиками)...</h2> 
+        </div>             
+        <img class="kitchen__man" src="./img/desert_man.jpg" alt="">     
+      </div> 
+    </section>
     <script src="./js/scirpts.js"></script>    
   </body>
 </html>
