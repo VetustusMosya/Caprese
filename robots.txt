@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+User-agent: GoogleBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+Sitemap: https://caprese.by/sitemap.xml
+Host: https://caprese.by

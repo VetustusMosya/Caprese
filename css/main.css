@@ -63,6 +63,7 @@ html {
 @media screen and (max-width: 786.01px) {
   html {
     background-position-x: -600px;
+    background-position-y: -15vh;
   }
 }
 
@@ -137,14 +138,6 @@ html {
   font-size: 30px;
   text-transform: uppercase;
   position: relative;
-}
-.nav .delivery__link--caption {
-  position: absolute;
-  top: -5px;
-  width: 100%;
-  font-size: 15px;
-  left: 50%;
-  transform: translate(-35%, -50%);
 }
 .nav .delivery__link:hover {
   text-decoration: underline;
@@ -440,13 +433,26 @@ html {
 }
 .kitchen__man {
   width: 45%;
-  height: fit-content;
+  height: 100%;
 }
 .kitchen__wrapper {
   width: 50%;
 }
 .kitchen__wrapper--title {
   text-align: center;
+}
+.kitchen .garnir {
+  color: white;
+  background: url(../img/burger__bg.png);
+  background-size: cover;
+  padding: 40px 0;
+}
+.kitchen .garnir__wrapper {
+  background-color: #031c48;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
 }
 @media screen and (max-width: 786.01px) {
   .kitchen {

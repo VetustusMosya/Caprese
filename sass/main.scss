@@ -3,6 +3,7 @@ $main__color: white;
 $text__color: #031c48;
 $contrast__color: white;
 $logo__color: #85282a;
+$square: #031c48;
 $little__shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.1),
   -4px -4px 4px 0 rgba(166, 165, 165, 0.1);
 $big__shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
@@ -72,6 +73,7 @@ html {
   background-size: cover;
   @media screen and (max-width: 786.01px) {
     background-position-x: -600px;
+    background-position-y: -15vh;
   }
 }
 
@@ -149,14 +151,6 @@ html {
     text-transform: uppercase;
     position: relative;
     &__link {
-      &--caption {
-        position: absolute;
-        top: -5px;
-        width: 100%;
-        font-size: 15px;
-        left: 50%;
-        transform: translate(-35%, -50%);
-      }
       &:hover {
         text-decoration: underline;
       }
@@ -389,7 +383,7 @@ html {
   color: white;
   &__wrapper {
     margin: 60px 0;
-    background-color: #031c48;
+    background-color: $square;
     padding: 0 40px 40px;
   }
   .category {
@@ -444,7 +438,7 @@ html {
   }
   &__man {
     width: 45%;
-    height: fit-content;
+    height: 100%;
   }
   &__wrapper {
     width: 50%;
@@ -452,10 +446,23 @@ html {
       text-align: center;
     }
   }
+  .garnir {
+    color: $main__color;
+    background: url(../img/burger__bg.png);
+    // background: $square;
+    background-size: cover;
+    padding: 40px 0;
+    &__wrapper {
+      background-color: $square;
+      flex-direction: column;
+      max-width: 500px;
+      width: 100%;
+      padding: 20px;
+    }
+  }
   @media screen and (max-width: 786.01px) {
     padding-bottom: 0;
     .container__revrse {
-      // salats & desert
       flex-direction: column-reverse;
     }
     &__man {
