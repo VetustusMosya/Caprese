@@ -74,7 +74,7 @@ html {
   background-size: cover;
   @media screen and (max-width: 786.01px) {
     background-position-x: -600px;
-    background-position-y: -15vh;
+    background-position-y: 0;
   }
 }
 
@@ -99,7 +99,7 @@ html {
     97%,
     $main__color
   );
-  height: 90vh;
+  height: 88vh;
   padding: 20px 0 100px;
   .container {
     justify-content: center;
@@ -113,6 +113,7 @@ html {
   }
   @media screen and (max-width: 786.01px) {
     height: 85vh;
+    
     &__logo {
       padding: 0 5px;
     }
@@ -706,35 +707,32 @@ footer {
   height: 100%;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
-  .modal__dialog {
-    max-width: 500px;
+  .modal__content { 
+    max-width: 400px;   
     margin: 40px auto;
-  }
-  .modal__content {
     position: relative;
-    width: 100%;
-    padding: 40px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    max-height: 80vh;
-    overflow-y: auto;
+    img{      
+    border-radius: 20px;
+    }
   }
   .modal__close {
     position: absolute;
-    top: 8px;
-    right: 14px;
-    font-size: 30px;
-    color: #000;
-    opacity: 0.5;
+    right: 10px;
+    font-size: 50px;
+    color: red;
     font-weight: 700;
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }  
+  @media screen and (max-width: 786.01px) {
+    .modal__content{
+      margin: 10px;
+    }      
   }
 }
 .show {
-  display: block;
+  display: block;  
 }
 // @media screen and (max-width: 786.01px) {
     

@@ -63,7 +63,7 @@ html {
 @media screen and (max-width: 786.01px) {
   html {
     background-position-x: -600px;
-    background-position-y: -15vh;
+    background-position-y: 0;
   }
 }
 
@@ -83,7 +83,7 @@ html {
 
 .main {
   background: linear-gradient(180deg, transparent, 90%, transparent, 97%, white);
-  height: 90vh;
+  height: 88vh;
   padding: 20px 0 100px;
 }
 .main .container {
@@ -694,31 +694,28 @@ footer .signatyre p {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.modal .modal__dialog {
-  max-width: 500px;
-  margin: 40px auto;
-}
 .modal .modal__content {
+  max-width: 400px;
+  margin: 40px auto;
   position: relative;
-  width: 100%;
-  padding: 40px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  max-height: 80vh;
-  overflow-y: auto;
+}
+.modal .modal__content img {
+  border-radius: 20px;
 }
 .modal .modal__close {
   position: absolute;
-  top: 8px;
-  right: 14px;
-  font-size: 30px;
-  color: #000;
-  opacity: 0.5;
+  right: 10px;
+  font-size: 50px;
+  color: red;
   font-weight: 700;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+@media screen and (max-width: 786.01px) {
+  .modal .modal__content {
+    margin: 10px;
+  }
 }
 
 .show {

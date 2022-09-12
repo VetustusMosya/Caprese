@@ -1,4 +1,6 @@
 "use strict";
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.style.display = "block";
 
 const modalTrigger = document.querySelectorAll("[data-modal]"),
     modal = document.querySelector(".modal"),
@@ -10,13 +12,13 @@ const modalTrigger = document.querySelectorAll("[data-modal]"),
 
   function closeModal() {
     modal.classList.toggle("show");
-    document.body.style.overflow = "";
+    document.body.parentNode.style.overflow = "";
   }
 
   function openModal() {
     modal.classList.toggle("show");
-    document.body.style.overflow = "hidden";
     clearInterval(modalTimerId);
+    document.body.parentNode.style.overflow = "hidden";
   }
 
   modalCloseBtn.addEventListener("click", closeModal);
@@ -33,7 +35,7 @@ const modalTrigger = document.querySelectorAll("[data-modal]"),
     }
   });
 
-  const modalTimerId = setTimeout(openModal, 3000);
+  const modalTimerId = setTimeout(openModal, 4000);
 
   function showModalByScroll() {
     if (
@@ -46,3 +48,4 @@ const modalTrigger = document.querySelectorAll("[data-modal]"),
   }
 
   // window.addEventListener("scroll", showModalByScroll);
+});
