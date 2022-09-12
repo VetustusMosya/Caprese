@@ -1,17 +1,18 @@
 @import url(./keyframes.css);
 $main__color: white;
-$text__color: #031c48;
-$contrast__color: white;
-$logo__color: #85282a;
-$square: #031c48;
+$text__color: #2c1816;
+$blue__element: #031c48;
 $little__shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.1),
   -4px -4px 4px 0 rgba(166, 165, 165, 0.1);
 $big__shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
   -8px -8px 8px 0 rgba(166, 165, 165, 0.3);
 
-// logo__font: https://www.fontsquirrel.com/fonts/carrois-gothic;
-
 // TODO different bg on pc & phone
+// Todo sale 10% oт pizza 
+// todo footer
+// todo delivery
+// todo party
+// TODO ADAPTATION HEADER
 
 * {
   padding: 0;
@@ -69,7 +70,7 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__18.png) 0 -10vh no-repeat;
+  background: fixed url(../img/bg__18.png) 0 -10.5vh no-repeat;
   background-size: cover;
   @media screen and (max-width: 786.01px) {
     background-position-x: -600px;
@@ -104,7 +105,7 @@ html {
     justify-content: center;
   }
   &__logo {
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     filter: sepia(0.1);
     opacity: 0;
@@ -118,7 +119,7 @@ html {
   }
 }
 //  ! .......... NAVIGATION .............
-.nav {
+.header {
   position: sticky;
   z-index: 999;
   top: 0;
@@ -127,12 +128,13 @@ html {
   color: $text__color;
   font-weight: 600;
   padding: 20px 0 10px;
+  .container {
+    align-items: center;
+  }
   .list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 900px;
-    width: 100%;
     font-size: 20px;
     &__link {
       border-radius: 20px;
@@ -146,14 +148,25 @@ html {
       }
     }
   }
-  .delivery {
-    font-size: 30px;
-    text-transform: uppercase;
-    position: relative;
-    &__link {
+  &__icon{
+    display: flex;
+    align-items: center;
+    &--link {
+        font-size: 30px;
+        text-transform: uppercase;
       &:hover {
         text-decoration: underline;
       }
+    }
+    &--inst {
+      img {
+        width: 45px;
+      }
+    }
+    &--map{
+      font-size: 40px;
+      margin: 0 20px;
+      padding-bottom: 8px;
     }
   }
   @media screen and (max-width: 786.01px) {
@@ -168,11 +181,15 @@ html {
         padding: 2px 5px;
       }
     }
-    .delivery {
-      font-size: 20px;
-      text-align: center;
-      &__link--caption {
-        display: none;
+    .header__icon{
+      &--link{
+        font-size: 20px;
+      }
+      &--map{
+        font-size: 30px;
+      }
+      &--inst{
+        width: 30px;
       }
     }
   }
@@ -197,6 +214,7 @@ html {
   }
   @media screen and (max-width: 786.01px) {
     padding: 20px 0 10px;
+    font-size: 30px;
     &__title {
       margin: 10px;
       i {
@@ -283,10 +301,13 @@ html {
 // !.............. PIZZA ...................
 .pizza {
   background: $main__color;
+  h3{
+    opacity: 0.9;
+  }
   &__container {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     @media screen and (max-width: 786.01px) {
-      margin-bottom: 0px;
+      padding-bottom: 0px;
     }
   }
   &__box:hover .box__wrapper--img {
@@ -297,7 +318,7 @@ html {
     padding-bottom: 100px;
     color: $text__color;
     .container {
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
     .category {
@@ -371,6 +392,9 @@ html {
     text-align: right;
     margin-left: 10px;
     align-self: center;
+    &:nth-child(2n+1){
+      font-weight: 700;
+    }
   }
   @media screen and (max-width: 786.01px) {
     padding: 10px 10px;
@@ -383,7 +407,7 @@ html {
   color: white;
   &__wrapper {
     margin: 60px 0;
-    background-color: $square;
+    background-color: $blue__element;
     padding: 0 40px 40px;
   }
   .category {
@@ -408,6 +432,7 @@ html {
 }
 // ! .............. LUNCH .................
 .lunch {
+  padding: 40px 0;
   background: $main__color;
   color: $text__color;
   .category {
@@ -430,6 +455,7 @@ html {
 }
 // ! ................ KITCHEN ..............
 .kitchen {
+  // display: none;
   background: $main__color;
   color: $text__color;
   padding-bottom: 100px;
@@ -449,11 +475,10 @@ html {
   .garnir {
     color: $main__color;
     background: url(../img/burger__bg.png);
-    // background: $square;
     background-size: cover;
     padding: 40px 0;
     &__wrapper {
-      background-color: $square;
+      background-color: $blue__element;
       flex-direction: column;
       max-width: 500px;
       width: 100%;
@@ -485,6 +510,7 @@ html {
     url(../img/drinks__bg.jpg) -190px no-repeat;
   background-size: cover;
   &__wrapper {
+    color: $text__color;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -496,8 +522,220 @@ html {
     &__wrapper {
       width: 100%;
       padding: 0;
-      margin: 0;
+      margin: 0 0 40px;
       background-color: rgba(255, 255, 255, 0.686);
     }
   }
 }
+// ! ................Delivery .................
+.delivery{
+  padding: 70px 0;
+  background-color: $main__color;
+  .category{
+    padding-top: 0;
+  }
+  &__description{    
+    li{
+      margin: 20px 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    span{
+      color: red;
+    }
+    &--btn{
+      display: block;
+      padding: 20px 10px;
+      border-radius: 20px;
+      background-color: $blue__element;
+      color: $main__color;
+      font-size: 20px;
+      text-align: center;
+    }
+  }  
+  iframe{
+    border-radius: 20px;
+    border: 4px solid $blue__element;
+    max-width: 800px;
+    width: 100%;
+    height: 600px;
+  }
+  @media screen and (max-width: 786.01px) {
+   padding: 40px 10px;
+   .container{
+    flex-direction: column-reverse;
+   }
+   iframe{
+    margin-top: 20px;
+   } 
+  }
+}
+// ! ................Party..............
+.party{
+  background-color: $main__color;
+  padding: 60px;
+  .category{
+    padding-top: 0;
+  }
+  .description{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    a{
+      display: block;
+      padding: 20px 15px;
+      border-radius: 20px;
+      background-color: $blue__element;
+      color: $main__color;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+  ul{
+    font-size: 30px;
+    li{
+      margin: 20px 0;
+      list-style-type:disc;
+    }
+  }
+  img{
+    width: 50%;
+    border-radius: 20px;
+  }
+  @media screen and (max-width: 786.01px) {
+    padding: 0;
+    .description{
+      padding: 40px 0px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .container{
+      background: url(../img/party.JPG) no-repeat ;
+      background-size: cover;
+    }
+    ul{
+      font-size: 20px;
+    }
+    img{
+      display: none;
+    }  
+  }
+}
+// ! ................. FOOTER ..............
+footer {
+  background-color: $blue__element;
+  color: $main__color;
+  font-size: 20px;
+  .container {
+    padding: 60px 0;
+  }
+  iframe {
+    border-radius: 20px;
+    border: 2px $main__color solid;
+    // max-width: 600px;
+    // width: 100%;
+    width: 700px;
+    height: 400px;
+  }
+  .aside {
+    width: 40%;
+    text-align: left;
+    h2 {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    ul {
+      margin-bottom: 60px;
+      li {
+        margin-bottom: 20px;
+        max-width: 220px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        a {
+          display: flex;
+          align-items: center;
+          i {
+            font-size: 30px;
+            margin-right: 10px;
+            width: 35px;
+          }
+          &:hover {
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+  .signatyre {
+    font-size: 15px;
+    padding: 17px;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    opacity: 0.3;
+    font-weight: 200;
+    a:hover {
+      text-decoration: underline;
+    }
+    p{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 786.01px) {
+    iframe {
+      width: 100%;
+    }
+    .aside {
+      width: 100%;
+      padding: 40px 10px 0 40px;
+      ul{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// ? .................MODAL...........
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  .modal__dialog {
+    max-width: 500px;
+    margin: 40px auto;
+  }
+  .modal__content {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .modal__close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 30px;
+    color: #000;
+    opacity: 0.5;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+.show {
+  display: block;
+}
+// @media screen and (max-width: 786.01px) {
+    
+// }
