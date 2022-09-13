@@ -57,7 +57,7 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__18.png) 0 -10.5vh no-repeat;
+  background: fixed url(../img/bg__18.png) 0 -10vh no-repeat;
   background-size: cover;
 }
 @media screen and (max-width: 786.01px) {
@@ -83,7 +83,7 @@ html {
 
 .main {
   background: linear-gradient(180deg, transparent, 90%, transparent, 97%, white);
-  height: 88vh;
+  height: 90vh;
   padding: 20px 0 100px;
 }
 .main .container {
@@ -113,10 +113,10 @@ html {
   background-color: white;
   color: #2c1816;
   font-weight: 600;
-  padding: 20px 0 10px;
 }
 .header .container {
   align-items: center;
+  height: 10vh;
 }
 .header .list {
   display: flex;
@@ -183,7 +183,7 @@ html {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 60px 0 10px;
+  padding: 78px 0 10px;
   color: #2c1816;
   align-items: center;
   font-size: 40px;
@@ -191,6 +191,19 @@ html {
 .category__title {
   text-align: center;
   margin: 0 50px;
+  position: relative;
+}
+.category__title--sticer {
+  position: absolute;
+  top: 23%;
+  right: -270px;
+  color: red;
+  font-weight: 500;
+  font-size: 28px;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: white;
+  transform: rotate(20deg);
 }
 .category__line {
   width: 100%;
@@ -207,6 +220,12 @@ html {
   }
   .category__title i {
     margin-right: 5px;
+  }
+  .category__title--sticer {
+    font-size: 20px;
+    top: -6%;
+    right: 88px;
+    transform: rotate(10deg);
   }
 }
 
@@ -423,12 +442,12 @@ html {
 }
 
 .lunch {
-  padding: 40px 0;
   background: white;
   color: #2c1816;
 }
 .lunch .category {
   display: flex;
+  padding: 20px 0 0;
   flex-direction: column;
 }
 .lunch .category__line {
@@ -450,8 +469,8 @@ html {
   color: #2c1816;
   padding-bottom: 100px;
 }
-.kitchen .container {
-  padding: 30px 0;
+.kitchen .category {
+  padding: 0;
 }
 .kitchen__man {
   width: 45%;
@@ -516,7 +535,7 @@ html {
 }
 
 .delivery {
-  padding: 70px 0;
+  padding: 40px 0;
   background-color: white;
 }
 .delivery .category {
@@ -560,7 +579,6 @@ html {
 
 .party {
   background-color: white;
-  padding: 60px;
 }
 .party .category {
   padding-top: 0;
