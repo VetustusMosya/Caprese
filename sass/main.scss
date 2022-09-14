@@ -1,4 +1,5 @@
 @import url(./keyframes.css);
+@import url(./preloader.css);
 $main__color: white;
 $text__color: #2c1816;
 $blue__element: #031c48;
@@ -12,6 +13,8 @@ $big__shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
   margin: 0;
   box-sizing: border-box;
 }
+
+// todo расписание в доставке исправить,
 
 p,
 h1,
@@ -82,6 +85,26 @@ html {
     justify-content: space-around;
   }
 }
+//  ? .......... IVENT .............
+.ivent{
+  text-transform: uppercase;
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  z-index: 99;
+  right: 30px;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: $main__color;
+  color: red;
+  border-radius: 20px 20px 0 0;
+  box-shadow: $big__shadow;
+  cursor: pointer;
+  @media screen and (max-width: 786.01px) {
+    font-size: 16px;
+  }
+}
 //  ! .......... MAIN ..............
 .main {
   background: linear-gradient(
@@ -115,7 +138,7 @@ html {
 //  ! .......... NAVIGATION .............
 .header {
   position: sticky;
-  z-index: 999;
+  z-index: 9;
   top: 0;
   width: 100%;
   background-color: $main__color;
@@ -155,21 +178,18 @@ html {
     &--inst {
       img {
         width: 45px;
+        margin: 0 20px;
       }
-    }
-    &--map{
-      font-size: 40px;
-      margin: 0 20px;
-      padding-bottom: 8px;
     }
   }
   @media screen and (max-width: 786.01px) {
     padding: 5px 0;
     .container {
       flex-direction: column-reverse;
+      height: auto;
     }
     .list {
-      font-size: 16px;
+      font-size: 14px;
       justify-content: space-around;
       a {
         padding: 2px 5px;
@@ -178,9 +198,6 @@ html {
     .header__icon{
       &--link{
         font-size: 20px;
-      }
-      &--map{
-        font-size: 30px;
       }
       &--inst{
         width: 30px;
@@ -206,7 +223,7 @@ html {
       top: 23%;
       right: -270px;
       color: red;
-      font-weight: 500;
+      font-weight: 900;
       font-size: 28px;
       width: 100%;
       text-transform: uppercase;
@@ -546,7 +563,7 @@ html {
   .category{
     padding-top: 0;
   }
-  &__description{    
+  .description {    
     li{
       margin: 20px 0;
       font-size: 20px;
@@ -555,9 +572,23 @@ html {
     span{
       color: red;
     }
+    &__timetable{ 
+      li:first-child{
+        padding-left: 0;
+      }  
+      li{          
+        padding-left: 30px; 
+        margin: 10px 0;    
+        max-width: 230px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
     &--btn{
       display: block;
       padding: 20px 10px;
+      margin-top: 40px;
       border-radius: 20px;
       background-color: $blue__element;
       color: $main__color;
@@ -572,11 +603,27 @@ html {
     width: 100%;
     height: 600px;
   }
+  &__terms{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 20px;
+    li{
+      list-style-type: disc;
+      text-align: start;
+      max-width: 600px;
+      width: 100%;
+      padding: 10px 5px;
+      opacity: 0.8;
+      span{
+        color: red;
+      }
+    }
+  }
   @media screen and (max-width: 786.01px) {
    padding: 40px 10px;
-   .container{
-    flex-direction: column-reverse;
-   }
    iframe{
     margin-top: 20px;
    } 
@@ -585,6 +632,7 @@ html {
 // ! ................Party..............
 .party{
   background-color: $main__color;
+  padding-bottom: 40px;
   .category{
     padding-top: 0;
   }
@@ -643,8 +691,6 @@ footer {
   iframe {
     border-radius: 20px;
     border: 2px $main__color solid;
-    // max-width: 600px;
-    // width: 100%;
     width: 700px;
     height: 400px;
   }
@@ -689,9 +735,6 @@ footer {
     a:hover {
       text-decoration: underline;
     }
-    p{
-      display: none;
-    }
   }
   @media screen and (max-width: 786.01px) {
     iframe {
@@ -711,7 +754,7 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 999;
   display: none;
   width: 100%;
   height: 100%;

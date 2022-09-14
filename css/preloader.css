@@ -1,0 +1,38 @@
+.preloader{
+  z-index: 9999;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.preloader__content{
+	max-width: 300px;
+	margin: 40px auto;
+	position: relative;
+  text-align: center; 
+}
+
+.preloader__img{  
+  animation: load 5s infinite ease-in-out;
+}
+ 
+@media screen and (max-width: 786.01px) {
+  .preloader__content{
+    max-width: 150px;
+  }
+}
+
+@keyframes load{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
