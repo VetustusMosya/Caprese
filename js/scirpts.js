@@ -1,7 +1,9 @@
 "use strict";
-window.addEventListener("DOMContentLoaded", () => {
+window.onload = function(){
   document.querySelector("#preloader").classList.remove("show");
-
+  document.querySelector(".main__logo").classList.add("animated__logo");
+};
+window.addEventListener("DOMContentLoaded", () => {
 const modalTrigger = document.querySelector("[data-modal]"),
     modal = document.querySelector(".modal"),
     modalCloseBtn = document.querySelector("[data-close]");

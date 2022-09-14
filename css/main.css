@@ -107,7 +107,7 @@ html {
 .main {
   background: linear-gradient(180deg, transparent, 90%, transparent, 97%, white);
   height: 90vh;
-  padding: 20px 0 100px;
+  padding: 20px 0 0;
 }
 .main .container {
   justify-content: center;
@@ -115,9 +115,10 @@ html {
 .main__logo {
   max-width: 500px;
   width: 100%;
-  filter: sepia(0.1);
   opacity: 0;
-  animation: appearan 1.5s 100ms ease-out forwards;
+}
+.main .animated__logo {
+  animation: appearan 1.5s 150ms ease-out forwards;
 }
 @media screen and (max-width: 786.01px) {
   .main {
