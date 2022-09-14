@@ -14,8 +14,6 @@ $big__shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
   box-sizing: border-box;
 }
 
-// todo расписание в доставке исправить,
-
 p,
 h1,
 h2,
@@ -69,7 +67,7 @@ html {
   background: fixed url(../img/bg__18.png) 0 -10vh no-repeat;
   background-size: cover;
   @media screen and (max-width: 786.01px) {
-    background-position-x: -600px;
+    background-position-x: 0;
     background-position-y: 0;
   }
 }
@@ -116,7 +114,6 @@ html {
     $main__color
   );
   height: 90vh;
-  padding: 20px 0 0;
   .container {
     justify-content: center;
   }

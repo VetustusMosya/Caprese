@@ -19,6 +19,7 @@
 }
 
 .preloader__img{  
+  height: 300px;
   animation: load 5s infinite ease-in-out;
 }
  

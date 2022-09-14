@@ -63,7 +63,7 @@ html {
 }
 @media screen and (max-width: 786.01px) {
   html {
-    background-position-x: -600px;
+    background-position-x: 0;
     background-position-y: 0;
   }
 }
@@ -107,7 +107,6 @@ html {
 .main {
   background: linear-gradient(180deg, transparent, 90%, transparent, 97%, white);
   height: 90vh;
-  padding: 20px 0 0;
 }
 .main .container {
   justify-content: center;
