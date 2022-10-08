@@ -1,7 +1,8 @@
 "use strict";
-window.onload = function(){
+window.onload = function () {
   document.querySelector("#preloader").classList.remove("show");
   document.querySelector(".main__logo").classList.add("animated__logo");
+  document.body.parentNode.style.overflow = "";
 
   const modalTrigger = document.querySelector("[data-modal]"),
     modal = document.querySelector(".modal"),
