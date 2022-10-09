@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow: hidden;
-}
-
 p,
 h1,
 h2,
@@ -62,14 +58,8 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__18.png) 0 -10vh no-repeat;
+  background: fixed url(../img/bg__18.png) no-repeat;
   background-size: cover;
-}
-@media screen and (max-width: 786.01px) {
-  html {
-    background-position-x: 0;
-    background-position-y: 0;
-  }
 }
 
 .container {
@@ -131,9 +121,7 @@ html {
 @media screen and (max-width: 786.01px) {
   .main {
     height: 85vh;
-  }
-  .main__logo {
-    padding: 0 5px;
+    margin: 0 15px;
   }
 }
 
@@ -207,7 +195,7 @@ html {
     height: auto;
   }
   .header .list {
-    font-size: 14px;
+    font-size: 18px;
     justify-content: space-around;
   }
   .header .list a {
@@ -218,6 +206,12 @@ html {
   }
   .header .header__icon--inst {
     width: 30px;
+  }
+}
+@media screen and (max-width: 360.1px) {
+  .header .list {
+    font-size: 14px;
+    justify-content: space-around;
   }
 }
 

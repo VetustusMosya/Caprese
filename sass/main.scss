@@ -14,10 +14,6 @@ $big__shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.3),
   box-sizing: border-box;
 }
 
-body {
-  overflow: hidden;
-}
-
 p,
 h1,
 h2,
@@ -68,12 +64,8 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__18.png) 0 -10vh no-repeat;
+  background: fixed url(../img/bg__18.png) no-repeat;
   background-size: cover;
-  @media screen and (max-width: 786.01px) {
-    background-position-x: 0;
-    background-position-y: 0;
-  }
 }
 
 .container {
@@ -134,9 +126,7 @@ html {
   }
   @media screen and (max-width: 786.01px) {
     height: 85vh;
-    &__logo {
-      padding: 0 5px;
-    }
+    margin: 0 15px;
   }
 }
 //  ! .......... NAVIGATION .............
@@ -207,7 +197,7 @@ html {
       height: auto;
     }
     .list {
-      font-size: 14px;
+      font-size: 18px;
       justify-content: space-around;
     }
     .list a {
@@ -218,6 +208,12 @@ html {
     }
     .header__icon--inst {
       width: 30px;
+    }
+  }
+  @media screen and (max-width: 360.1px) {
+    .list {
+      font-size: 14px;
+      justify-content: space-around;
     }
   }
 }
