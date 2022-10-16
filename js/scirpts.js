@@ -1,7 +1,10 @@
 "use strict";
 window.onload = function () {
-  document.querySelector("#preloader").classList.remove("show");
-  document.querySelector(".main__logo").classList.add("animated__logo");
+  try {
+    document.querySelector("#preloader").classList.remove("show");
+    document.querySelector(".main__logo").classList.add("animated__logo");
+  } catch (error) { }
+
   document.body.parentNode.style.overflow = "";
 
   const modalTrigger = document.querySelector("[data-modal]"),
