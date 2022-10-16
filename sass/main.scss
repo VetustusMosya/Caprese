@@ -554,7 +554,7 @@ html {
       transparent 90%,
       rgba(255, 255, 255) 100%
     ),
-    url(../img/drinks__bg.jpg) -190px no-repeat;
+    url(../img/drinks__bg.jpg) -190px no-repeat, white;
   background-size: cover;
   &__wrapper {
     color: $text__color;
@@ -804,6 +804,9 @@ footer {
 }
 .show {
   display: block;
+}
+.hidden {
+  overflow: hidden;
 }
 // @media screen and (max-width: 786.01px) {
 

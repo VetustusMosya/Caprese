@@ -5,7 +5,7 @@ window.onload = function () {
     document.querySelector(".main__logo").classList.add("animated__logo");
   } catch (error) { }
 
-  document.body.parentNode.style.overflow = "";
+  document.querySelector('html').classList.remove('hidden');
 
   const modalTrigger = document.querySelector("[data-modal]"),
     modal = document.querySelector(".modal"),
