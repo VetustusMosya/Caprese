@@ -64,7 +64,7 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__18.png) no-repeat;
+  background: fixed url(../img/bg_18.webp) no-repeat;
   background-size: cover;
 }
 
@@ -446,7 +446,7 @@ html {
 }
 // ! ............. Burger ..............
 .burger {
-  background: url(../img/burger__bg.png) center -150px no-repeat;
+  background: url(../img/burger_bg.webp) center -150px no-repeat;
   background-size: cover;
   color: white;
   padding: 60px 0;
@@ -521,7 +521,7 @@ html {
   }
   .garnir {
     color: $main__color;
-    background: url(../img/burger__bg.png);
+    background: url(../img/burger_bg.webp);
     background-size: cover;
     padding: 40px 0;
     &__wrapper {
@@ -554,7 +554,7 @@ html {
       transparent 90%,
       rgba(255, 255, 255) 100%
     ),
-    url(../img/drinks__bg.jpg) -190px no-repeat, white;
+    url(../img/drinks_bg.webp) -190px no-repeat, white;
   background-size: cover;
   &__wrapper {
     color: $text__color;
@@ -687,7 +687,7 @@ html {
       background: rgba(255, 255, 255, 0.6);
     }
     .container {
-      background: url(../img/party.JPG) no-repeat;
+      background: url(../img/party.webp) no-repeat;
       background-size: cover;
     }
     ul {

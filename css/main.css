@@ -58,7 +58,7 @@ nav {
 html {
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  background: fixed url(../img/bg__18.png) no-repeat;
+  background: fixed url(../img/bg_18.webp) no-repeat;
   background-size: cover;
 }
 
@@ -448,7 +448,7 @@ html {
 }
 
 .burger {
-  background: url(../img/burger__bg.png) center -150px no-repeat;
+  background: url(../img/burger_bg.webp) center -150px no-repeat;
   background-size: cover;
   color: white;
   padding: 60px 0;
@@ -528,7 +528,7 @@ html {
 }
 .kitchen .garnir {
   color: white;
-  background: url(../img/burger__bg.png);
+  background: url(../img/burger_bg.webp);
   background-size: cover;
   padding: 40px 0;
 }
@@ -555,7 +555,7 @@ html {
 }
 
 .drinks {
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, transparent 10%, transparent 90%, rgb(255, 255, 255) 100%), url(../img/drinks__bg.jpg) -190px no-repeat, white;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, transparent 10%, transparent 90%, rgb(255, 255, 255) 100%), url(../img/drinks_bg.webp) -190px no-repeat, white;
   background-size: cover;
 }
 .drinks__wrapper {
@@ -691,7 +691,7 @@ html {
     background: rgba(255, 255, 255, 0.6);
   }
   .party .container {
-    background: url(../img/party.JPG) no-repeat;
+    background: url(../img/party.webp) no-repeat;
     background-size: cover;
   }
   .party ul {
