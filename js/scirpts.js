@@ -3,30 +3,46 @@ window.onload = function () {
   try {
     document.querySelector("#preloader").classList.remove("show");
     document.querySelector(".main__logo").classList.add("animated__logo");
+
+
   } catch (error) { }
 
-  let modalTimerId = document.location.pathname === '/' ? setTimeout(openModal, 5000) : "time";
+  let modalTimerId = document.location.pathname === '/' ? setTimeout(openModal, 1000) : "time";
+  let sliderTimerId = setInterval(() => { changeSlide(true); console.log(23); }, 3000);
 
   document.querySelector('html').classList.remove('hidden');
 
+
   // !  Modal
 
-  const modalTrigger = document.querySelector("[data-modal]"),
+  const modalTriggerBtn = document.querySelector("[data-modal]"),
     modal = document.querySelector(".modal"),
     modalCloseBtn = document.querySelector("[data-close]");
 
-  modalTrigger.addEventListener("click", openModal);
+
+  const attArr = document.querySelectorAll("[data-img]"),
+    nextBtn = document.querySelector(".modal__next"),
+    backBtn = document.querySelector(".modal__back");
+  let count = 0;
+
+  modalTriggerBtn.addEventListener("click", () => {
+    openModal(),
+      sliderTimerId = setInterval(() => { changeSlide(true); console.log(23); }, 2000);
+  });
 
   function closeModal() {
     modal.classList.toggle("show");
-    modalTrigger.classList.toggle("show");
+    modalTriggerBtn.classList.toggle("show");
     document.body.parentNode.style.overflow = "";
+    clearInterval(sliderTimerId);
+    changeSlide(true);
   }
 
   function openModal() {
     modal.classList.toggle("show");
-    modalTrigger.classList.remove("show");
+    modalTriggerBtn.classList.remove("show");
     document.body.parentNode.style.overflow = "hidden";
+    attArr[count].classList.add('show');
     clearInterval(modalTimerId); // ! time
   }
 
@@ -46,20 +62,17 @@ window.onload = function () {
 
   // ! Slider
 
-  const attArr = document.querySelectorAll("[data-img]"),
-    nextBtn = document.querySelector(".modal__next"),
-    backBtn = document.querySelector(".modal__back");
-  let count = 0;
-
-  attArr[count].classList.add('show');
-
   nextBtn.addEventListener("click", () => {
-    changeSlide(true)
+    clearInterval(sliderTimerId);
+    changeSlide(true);
   });
 
   backBtn.addEventListener("click", () => {
-    changeSlide(false)
+    clearInterval(sliderTimerId);
+    changeSlide(false);
   });
+
+
 
   function changeSlide(move) {
     attArr[count].classList.remove('show');
