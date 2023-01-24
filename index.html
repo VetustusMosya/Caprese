@@ -113,6 +113,24 @@
         <div class="pizza__box box">
           <div class="box__wrapper">
             <img
+              src="./img/student.webp"
+              alt="pizza"
+              class="box__wrapper--img"
+            />
+            <span class="box__wrapper--new">New</span>
+            <h3 class="box__wrapper--title">Студенческая</h3>
+            <p class="box__wrapper--text">
+              Колбаски Пепперони, ветчина, сосиски
+            </p>
+          </div>
+          <div class="box__numbers">
+            <span class="box__numbers--cost">14,5 BYN</span>
+            <span>450 г.</span>
+          </div>
+        </div>
+        <div class="pizza__box box">
+          <div class="box__wrapper">
+            <img
               src="./img/sypermeet.webp"
               alt="pizza"
               class="box__wrapper--img"
@@ -1026,8 +1044,33 @@
     <!-- ? ............... MODAL ............... -->
     <div class="modal">
       <div class="modal__content">
-        <div data-close class="modal__close">&times;</div>
-        <img src="./promo.webp?123" alt="promo" />
+        <div data-close class="modal__close modal__button">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div data-close class="modal__back modal__button">
+          <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div data-close class="modal__next modal__button">
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <img
+          class="modal__content--image"
+          src="./action1.webp"
+          alt="promo"
+          data-img
+        />
+        <img
+          class="modal__content--image"
+          src="./action2.webp"
+          alt="promo"
+          data-img
+        />
+        <img
+          class="modal__content--image"
+          src="./promo.webp?123"
+          alt="promo"
+          data-img
+        />
       </div>
     </div>
     <!-- ? ............. Ivents .............. -->
