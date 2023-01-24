@@ -35,6 +35,7 @@ window.onload = function () {
     modalTriggerBtn.classList.toggle("show");
     document.body.parentNode.style.overflow = "";
     clearInterval(sliderTimerId);
+    setTimeout(() => { openModal() }, 5000);
     changeSlide(true);
   }
 
