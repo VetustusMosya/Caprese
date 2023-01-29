@@ -1,17 +1,14 @@
 "use strict";
 window.onload = function () {
-  try {
-    document.querySelector("#preloader").classList.remove("show");
-    document.querySelector(".main__logo").classList.add("animated__logo");
-
-
-  } catch (error) { }
-
-  let modalTimerId = document.location.pathname === '/' ? setTimeout(openModal, 1000) : "time";
-  let sliderTimerId = setInterval(() => { changeSlide(true); console.log(23); }, 3000);
 
   document.querySelector('html').classList.remove('hidden');
 
+  try {
+    document.querySelector("#preloader").classList.remove("show");
+    document.querySelector(".main__logo").classList.add("animated__logo");
+  } catch (error) { }
+
+  let modalTimerId = document.location.pathname === '/' ? setTimeout(openModal, 3000) : "time";
 
   // !  Modal
 
@@ -19,23 +16,14 @@ window.onload = function () {
     modal = document.querySelector(".modal"),
     modalCloseBtn = document.querySelector("[data-close]");
 
-
-  const attArr = document.querySelectorAll("[data-img]"),
-    nextBtn = document.querySelector(".modal__next"),
-    backBtn = document.querySelector(".modal__back");
-  let count = 0;
-
   modalTriggerBtn.addEventListener("click", () => {
-    openModal(),
-      sliderTimerId = setInterval(() => { changeSlide(true); console.log(23); }, 2000);
+    openModal();
   });
 
   function closeModal() {
     modal.classList.toggle("show");
     modalTriggerBtn.classList.toggle("show");
     document.body.parentNode.style.overflow = "";
-    clearInterval(sliderTimerId);
-    setTimeout(() => { openModal() }, 5000);
     changeSlide(true);
   }
 
@@ -63,17 +51,23 @@ window.onload = function () {
 
   // ! Slider
 
+  const attArr = document.querySelectorAll("[data-img]"),
+    nextBtn = document.querySelector(".modal__next"),
+    backBtn = document.querySelector(".modal__back");
+  let count = 0;
+
+  if (attArr.length == 1) {
+    nextBtn.remove();
+    backBtn.remove();
+  }
+
   nextBtn.addEventListener("click", () => {
-    clearInterval(sliderTimerId);
     changeSlide(true);
   });
 
   backBtn.addEventListener("click", () => {
-    clearInterval(sliderTimerId);
     changeSlide(false);
   });
-
-
 
   function changeSlide(move) {
     attArr[count].classList.remove('show');

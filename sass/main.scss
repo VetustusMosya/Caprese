@@ -114,7 +114,17 @@ html {
   );
   height: 90vh;
   .container {
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    p {
+      max-width: 600px;
+      width: 100%;
+      color: red;
+      font-weight: 700;
+      font-size: 35px;
+      opacity: 1;
+    }
   }
   &__logo {
     max-width: 500px;
@@ -127,6 +137,9 @@ html {
   @media screen and (max-width: 786.01px) {
     height: 85vh;
     margin: 0 15px;
+    .container p {
+      font-size: 30px;
+    }
   }
 }
 //  ! .......... NAVIGATION .............

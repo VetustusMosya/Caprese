@@ -108,7 +108,17 @@ html {
   height: 90vh;
 }
 .main .container {
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.main .container p {
+  max-width: 600px;
+  width: 100%;
+  color: red;
+  font-weight: 700;
+  font-size: 35px;
+  opacity: 1;
 }
 .main__logo {
   max-width: 500px;
@@ -122,6 +132,9 @@ html {
   .main {
     height: 85vh;
     margin: 0 15px;
+  }
+  .main .container p {
+    font-size: 30px;
   }
 }
 
